@@ -1,0 +1,72 @@
+<div class="justify-content-center padded-top text-center">
+
+  <div class="carousel-inner rounded-5 shadow-4-strong ">
+    <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [interval]="3000">
+      <mdb-carousel-item *ngFor="let story of storySlides">
+        <div class="view col-5 col-offset-3 ">
+          <img src="{{story.src}}" class="d-block w-75 h-25" />
+        </div>
+        <div class="carousel-caption">
+          <h5>{{story.name}}</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </mdb-carousel-item>
+
+    </mdb-carousel>
+  </div>
+  <div class="row">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Nisi scelerisque eu ultrices
+      vitae auctor eu augue ut lectus. Sed risus pretium quam vulputate dignissim suspendisse in est ante. Ut consequat
+      semper viverra nam libero justo laoreet sit amet. Consectetur libero id faucibus nisl tincidunt </p>
+  </div>
+  <hr />
+  <div class="row">
+    <h3>If you want to keep up with what's going on here, we post a lot on our social media</h3>
+    <div>
+      <ul class="list-group list-group-horizontal  justify-content-center">
+        <li class="list-group-item"><span><i class="fab fa-instagram fa-3x"></i></span></li>
+        <li class="list-group-item"><span><i class="fab fa-facebook fa-3x"></i></span></li>
+        <li class="list-group-item"> <span><i class="fab fa-tiktok fa-3x"></i></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr />
+<!-- Section: Team v.2 -->
+<section class="team-section text-center my-5">
+
+  <!-- Section heading -->
+  <h2 class="h1-responsive font-weight-bold my-5">Our amazing team</h2>
+  <!-- Section description -->
+  <p class="grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Fugit, error
+    amet numquam iure provident voluptate esse quasi,
+    veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p>
+
+  <!-- Grid row -->
+  <div class="row text-center justify-content-center">
+
+    <!-- Grid column -->
+    <div class="col-md-4 mb-md-0 mb-5" *ngFor="let block of team">
+      <div class="avatar mx-auto" (click)="openModal(block)">
+        <img [src]="'data:image/jpeg;base64,' + block.image.image" class="rounded z-depth-1-half h-25 w-25"
+          alt="Sample avatar">
+      </div>
+      <h4 class="font-weight-bold dark-grey-text my-4">{{block.name}}</h4>
+      <h6 class="text-uppercase grey-text mb-3">
+        <strong>{{block.title}}</strong>
+      </h6>
+      <div *ngIf="block.socialMedia">
+        <!-- Facebook-->
+        <a type="button" mdbBtn floating="true" size="sm" color="fb" class="mx-1 mb-0"
+          *ngFor="let entry of block.socialMedia | keyvalue" href="{{entry.value}}">
+          <i [class]="'fab fa-' + entry.key"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Grid row -->
+
+</section>

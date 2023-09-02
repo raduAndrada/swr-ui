@@ -1,0 +1,31 @@
+<div class="row col-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{trendingBlock.title}}</h5>
+            <p class="card-text">
+                {{trendingBlock.shortDescription}}
+            </p>
+            <!-- <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </p> -->
+        </div>
+        <img [src]="'data:image/jpeg;base64,' + trendingBlock.images[0].image" class="card-img-bottom img-fluid" alt="Camera" />
+    </div>
+</div>
+<br/>
+<div class="row text-center">
+    <p >
+        {{trendingBlock.description}}
+    </p>
+</div>
+<br/>
+<div class="row col-12">
+    <div class="col-6">
+        <img [src]="'data:image/jpeg;base64,' + trendingBlock.images[1].image" class="img-fluid rounded"
+            alt="Townhouses and Skyscrapers" />
+    </div>
+    <div class="col-6">
+        <img [src]="'data:image/jpeg;base64,' + trendingBlock.images[2].image" class="img-fluid rounded"
+            alt="Townhouses and Skyscrapers" />
+    </div>
+</div>

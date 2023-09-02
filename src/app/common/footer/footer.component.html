@@ -1,0 +1,34 @@
+<!-- Footer -->
+<footer class="page-footer font-small pt-2 blue-grey">
+    <div class="container-fluid text-center ">
+        <!-- Grid row -->
+        <div class="row align-items-start">
+            <div class="col-5 text-left">
+                <ul class="list-inline">
+                    <li class="list-inline-item" *ngFor="let socialLink of socialLinks"> <a href="{{socialLink.link}}">
+                        <i class="{{socialLink.name}}"></i>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="col-5 offset-2 text-right">
+                <ul class="list-inline">
+                    <li class="list-inline-item" *ngFor="let additionalLink of additionalLinks"> <a href="{{additionalLink.link}}">
+                            {{additionalLink.name}}
+                        </a></li>
+                </ul>
+            </div>
+            <!-- Grid column -->
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-2"> </div>
+</footer>
+
+
+<footer class="page-footer font-small fixed-bottom">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-2"> </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

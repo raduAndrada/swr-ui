@@ -1,0 +1,82 @@
+<!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light" [containerInside]="false">
+
+    <mdb-navbar-brand><a class="navbar-brand blue-grey-text" routerLink="/">Gram logo placeholder</a></mdb-navbar-brand>
+    <links>
+        <ul class="navbar-nav ml-auto">
+            <li *ngFor="let item of menuItems" class="nav-item">
+                <a class="nav-link blue-grey-text" routerLinkActive="active" mdbWavesEffect
+                    routerLink="{{item.link}}">{{item.name}} <span class="underline"></span></a>
+            </li>
+        </ul>
+    </links>
+</mdb-navbar> -->
+
+<!-- TODO cleanup-->
+
+<mdb-sidenav-layout>
+    <mdb-sidenav #sidenav="mdbSidenav">
+        <a class="ripple d-flex justify-content-center py-4 mb-3" style="border-bottom: 2px solid #f5f5f5" href="#!"
+            data-mdb-ripple-color="primary">
+            <img id="MDB-logo" src="https://mdbcdn.b-cdn.net/wp-content/uploads/2018/06/logo-mdb-jquery-small.webp"
+                alt="MDB Logo" draggable="false" />
+        </a>
+        <ul class="list-inline text-center">
+            <li class="list-inline-item" *ngFor="let socialLink of socialLinks"> <a href="{{socialLink.link}}">
+                    <i class="{{socialLink.name}}"></i>
+                </a></li>
+        </ul>
+        <hr class="mb-4 mt-0" />
+        <ul class="sidenav-menu px-1 pb-5">
+            <ng-container *ngFor="let item of menuItems">
+                <mdb-sidenav-item [ngClass]="{'pt-3 d-block': item.subheading}">
+                    <span *ngIf="item.subheading" class="sidenav-subheading text-muted">{{ item.subheading }}</span>
+                    <a class="sidenav-link" tabindex="0" routerLinkActive="active" routerLink="{{item.link}}" mdbRipple>
+                        <!-- <i class="fas {{item.icon}} fa-fw me-3" ></i> -->
+                         {{ item.name }}
+                    </a>
+                    <ul *ngIf="item.submenu" class="sidenav-collapse" mdbCollapse>
+                        <li class="sidenav-item" *ngFor="let subitem of item.submenu">
+                            <a class="sidenav-link" tabindex="0" mdbRipple>{{subitem.name}}</a>
+                        </li>
+
+                    </ul>
+                </mdb-sidenav-item>
+            </ng-container>
+        </ul>
+        <div class="px-4 pb-5" style="height: 100px">
+            <hr class="mb-4 mt-0" />
+            <p class="small text-muted" style="font-size: x-small;"><a class="text-decoration-none"
+                    href="{{contact.location.googleLink}}">
+                    {{contact.location.address}} </a>
+                <br> <a href="{{'tel:' + contact.phoneNumber">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{contact.phoneNumber}}</a>
+            </p>
+        <!-- Toggler -->
+            <p class="small text-muted" style="font-size: x-small;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{contact.openHours[0]}} <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{contact.openHours[1]}} </p>
+        </div>
+    </mdb-sidenav>
+    <mdb-sidenav-content #sidenavContent>
+        <div class="row pb-2">
+            <!-- Toggler -->
+            <div class="col-2">
+                <button #sidenavToggle class="btn btn-ouline btn-secondary btn-sm" (click)="sidenav.toggle()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="col-7 offset-3 col-sm-6 text-center" *ngIf="showLocation" id="locationId">
+                <p class="small text-muted " style="font-size: xx-small;"><a class="text-decoration-none"
+                        href="{{contact.location.googleLink}}">
+                        {{contact.location.address}} </a>
+                    <br> <a
+                        href="{{'tel:' + contact.phoneNumber">&nbsp;&nbsp;&nbsp;&nbsp;
+                        {{contact.phoneNumber}}</a>
+                </p>
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+        <button type="button" class="btn btn-danger btn-lg btn-outline" #btnBackToTop (click)="scrollToTop()"
+            [ngStyle]="{'display': display}" id="btnBackToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <app-footer></app-footer>
+    </mdb-sidenav-content>
+</mdb-sidenav-layout>

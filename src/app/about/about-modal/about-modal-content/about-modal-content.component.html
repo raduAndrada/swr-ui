@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img [src]="'data:image/jpeg;base64,' + teamBlock.image.image" class="img-fluid"/>
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{teamBlock.title}}</h5>
+      <p class="card-text" *ngFor="let paragraph of teamBlock.description">{{paragraph}}</p>
+    </div>
+  </div>

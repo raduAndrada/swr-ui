@@ -1,0 +1,30 @@
+.nav-link.active {
+    text-decoration: underline #607d8b;
+    transition: text-decoration-color #607d8b 500ms;
+}
+
+.nav-link:hover {
+    text-decoration: underline #607d8b;
+}
+
+a.sidenav-link.active {
+    text-decoration: underline #607d8b;
+    transition: text-decoration-color #607d8b 500ms;
+}
+
+.sidenav-link:hover {
+    text-decoration: underline #607d8b;
+}
+
+#btnBackToTop {
+    position: fixed;
+    bottom: 5%;
+    right: 50%;
+  }
+
+#locationId {
+    position: fixed;
+}
+#sidenavToggle{
+    position: fixed;
+}
