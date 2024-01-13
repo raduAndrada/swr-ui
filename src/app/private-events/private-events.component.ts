@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
-import { PopupComponent } from '../common/modal/popup/popup.component';
+import { ImageBlock } from '../common/common.model';
+import { ImagesRestService } from '../common/images.rest.service';
 import { PrivateEventsModalComponent } from './modal/private-events-modal.component';
-import { card_data } from './private-events.model';
 
 @Component({
   selector: 'app-private-events',
@@ -12,9 +12,8 @@ import { card_data } from './private-events.model';
 export class PrivateEventsComponent {
 
   modalRef!: MdbModalRef<PrivateEventsModalComponent>;
-  cardData = card_data;
+  eventsCarousel: ImageBlock[] = [];
 
-  
   config = {
     animation: true,
     backdrop: true,
@@ -23,13 +22,19 @@ export class PrivateEventsComponent {
     modalClass: 'modal-large',
   }
 
-  constructor(private modalService: MdbModalService) { }
+  constructor(private modalService: MdbModalService,
+    private imageRestService: ImagesRestService
+  ) { }
 
   ngOnInit() {
+    const origin = `events::carousel`;
+    this.imageRestService.findAllByOrigin(origin).subscribe(
+      events => this.eventsCarousel = events
+    )
   }
 
   openModal() {
     this.modalRef = this.modalService.open(PrivateEventsModalComponent, this.config)
   }
-  
+
 }

@@ -1,49 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
-import { environment } from 'src/environments/environment';
-import { RestService } from '../common/rest.service';
-import { AboutModalComponent } from './about-modal/about-modal.component';
-import { our_sorty_slides as our_story_slides, TeamBlock } from './about.model';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { contact, ImageBlock, social_links } from '../common/common.model';
+import { ImagesRestService } from '../common/images.rest.service';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit{
+export class AboutComponent implements OnInit, OnDestroy {
 
-  storySlides = our_story_slides;
+  socialLinks = social_links;
+  contact = contact;
 
-  team: TeamBlock[] = [];
-  modalRef!: MdbModalRef<AboutModalComponent>;
-
-  config = {
-    animation: true,
-    backdrop: true,
-    ignoreBackdropClick: false,
-    keyboard: true,
-    modalClass: 'modal-large',
-  }
+  aboutCarousel: ImageBlock[] = [];
+  subscriptions: Subscription[] = [];
 
   constructor(
-    private modalService: MdbModalService,
-    private readonly aboutRest : RestService<TeamBlock>) {
-      aboutRest.setBaseUrl(environment.staticData.serverPort + environment.staticData.teamApi);
+    private imagesRest: ImagesRestService) {
   }
 
   ngOnInit(): void {
-    this.aboutRest.get().subscribe(
-      team => {
-        this.team = team;
-      }
-    )
+    //refactor this into a separate component
+    const origin = 'about::carousel';
+    this.subscriptions.push(
+      this.imagesRest.findAllByOrigin(origin)
+        .subscribe(dishesMenuCarousel => {
+          this.aboutCarousel = dishesMenuCarousel;
+        }));
   }
 
-
-  openModal(teamBlock: TeamBlock) {
-    this.modalRef = this.modalService.open(AboutModalComponent, this.config)
-    this.modalRef.component.teamBlock = teamBlock;
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(sub => sub.unsubscribe());
   }
-
 }

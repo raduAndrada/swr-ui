@@ -48,6 +48,7 @@ export const contactFormSelectEventType: SelectInput = {
 
 export const privateEventInput3rdForm: InputDetails[] = [
     { type: "number", controlName: "contactNumberOfPeople", placeholder: "Number of people" },
+    { type: "text", controlName: "contactRequestDate", placeholder: "Request a date" },
     { type: "textarea", controlName: "contactAdditionalInfo", placeholder: "Additional information" }
 ]
 

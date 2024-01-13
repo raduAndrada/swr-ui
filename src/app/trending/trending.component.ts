@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
-import { card_data } from '../private-events/private-events.model';
 import { TrendingModalComponent } from './trending-modal/trending-modal.component';
 import { TrendingBlock } from './trending.model';
 import { TrendingRestService } from './trending.rest.service';
@@ -13,7 +12,6 @@ import { TrendingRestService } from './trending.rest.service';
 export class TrendingComponent {
 
   modalRef!: MdbModalRef<TrendingModalComponent>;
-  cardData = card_data;
 
   trendingBlocks!: TrendingBlock[];
 

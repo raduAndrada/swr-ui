@@ -1,12 +1,13 @@
 <!-- Footer -->
-<footer class="page-footer font-small pt-2 blue-grey">
+<footer class="page-footer pt-2">
     <div class="container-fluid text-center ">
         <!-- Grid row -->
         <div class="row align-items-start">
-            <div class="col-5 text-left">
+            <div class="col-5 text-left" >
                 <ul class="list-inline">
-                    <li class="list-inline-item" *ngFor="let socialLink of socialLinks"> <a href="{{socialLink.link}}">
-                        <i class="{{socialLink.name}}"></i>
+                    <li class="list-inline-item" *ngFor="let socialLink of socialLinks"> <a href="{{socialLink.link}}" 
+                        >
+                        <i class="{{socialLink.name}}" [style]="'color:' + socialLink.color"></i>
                         </a></li>
                 </ul>
             </div>

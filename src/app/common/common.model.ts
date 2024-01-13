@@ -12,7 +12,7 @@ export enum Label {
 export interface NutritionalValue {
     kcal: number;
     kj: number;
-    values: Map<string,number>
+    values: Map<string, number>
     ingredients: Map<Ingredient, number>;
 }
 
@@ -33,10 +33,12 @@ export interface Dish {
     nutritionalValue: NutritionalValue;
     labels: Label[];
     category: DishCategory;
+    description: string;
+    quantity: string;
 }
 
 export interface DishMenu {
-    subcategoryMenu: DishWrapper[] 
+    subcategoryMenu: DishWrapper[]
 }
 
 export interface Subcategory {
@@ -78,8 +80,8 @@ export interface ContactData {
 
 export interface SocialLink {
     link: string;
-
     name: string;
+    color?: string;
 }
 
 
@@ -110,20 +112,17 @@ export interface SearchRequest<T> {
 
 
 export const social_links: SocialLink[] = [
-    { link: "", name: "fab fa-instagram" },
-    { link: "", name: "fab fa-facebook" },
-    { link: "", name: "fab fa-twitter" },
-    { link: "", name: "fab fa-tiktok" },
+    { link: "https://www.instagram.com/bistro__gram/", name: "fab fa-instagram", color: "#ac2bac" },
+    { link: "https://www.facebook.com/BistroGramCluj", name: "fab fa-facebook", color: "#3b5998" },
+    // { link: "", name: "fab fa-twitter", color: "#55acee" },
+    // { link: "", name: "fab fa-tiktok", color: "#1f2122" }
 ];
-
-
-
 export const contact: ContactData = {
     location: {
-        address: 'Alexandru Vaida Voevod 14A', googleLink: 'https://goo.gl/maps/KPKFiWMv4nCVJwHy6'
+        address: 'Alexandru Vaida Voevod 14A', googleLink: 'https://maps.app.goo.gl/eUMd2DnhLqL3SHjM6'
     },
-    phoneNumber: '0732336978',
-    openHours: ["Mon-Sat: 08-18", "Sun: Closed"]
+    phoneNumber: '0730165163',
+    openHours: ["Mon-Fri: 08-16", "Sat: 10-16", "Sun: Closed"]
 }
 
 export interface DishCategory {

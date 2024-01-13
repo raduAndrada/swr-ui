@@ -50,18 +50,19 @@ export class PrivateEventsForm {
       'contactFormTel': ['', Validators.required],
       'contactFormCompany': ['', Validators.required],
       'contactFormPartyType': ['', Validators.required],
+      'contactRequestDate': [''],
       'contactNumberOfPeople': [''],
       'contactAdditionalInfo': [''],
-      'contactPrivateEventSource': [''],
-      'startTimeControl': ['06:00 PM', Validators.required],
-      'endTimeControl': ['11:00 PM', Validators.required],
-      'datepickerControl': ['', Validators.required],
+      // 'contactPrivateEventSource': [''],
+      // 'startTimeControl': ['06:00 PM', Validators.required],
+      // 'endTimeControl': ['11:00 PM', Validators.required],
+      // 'datepickerControl': ['', Validators.required],
     });
   }
 
   onSubmit() {
     this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
-      alert('Your message has been sent.');
+      alert('The request was received. Someone will contact you soon.');
       this.contactForm.reset();
       this.disabledSubmitButton = true;
     }, error => {
@@ -72,7 +73,11 @@ export class PrivateEventsForm {
 
   openToast() {
     setTimeout(() => this.notificationRef = this.notificationService.open(ConfirmationToastComponent, { 
-      position: 'top-center'
+      position: 'top-center',
+      data: {
+        toastTitle: "Request Recieved",
+        toastMessage: "Someone will contact you soon"
+      }
     }), 1500);
   }
 

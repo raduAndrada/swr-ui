@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
 import { MdbSidenavComponent } from 'mdb-angular-ui-kit/sidenav';
 import { contact, social_links } from '../common.model';
 import { menuItems } from './menu.model';
@@ -9,7 +9,6 @@ import { menuItems } from './menu.model';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
- 
 
   @ViewChild('sidenav', { static: true })
   sidenav!: MdbSidenavComponent;

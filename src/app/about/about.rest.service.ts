@@ -4,12 +4,11 @@ import { Observable, catchError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { RestService } from '../common/rest.service';
 import { TrendingBlock } from '../trending/trending.model';
-import { TeamBlock } from './about.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AboutService extends RestService<TeamBlock> {
+export class AboutService extends RestService<TrendingBlock> {
 
 
   constructor(private readonly _http: HttpClient) {

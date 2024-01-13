@@ -9,9 +9,9 @@ export interface MenuItem {
 
 
 export const menuItems: MenuItem [] = [
-    {name: "Our Menus", link: "/menu", icon: "fa-book-open"},
+    {name: "Our Menu", link: "/menu", icon: "fa-book-open"},
     {name: "Our Story", link: "/about"},
-    {name: "Private Events", link: "/private-events", icon: "fa-calendar-check",
+    {name: "Book your Gram expedience", link: "/private-events", icon: "fa-calendar-check",
         submenu: [
             {name: "Catering"},
             {name: "Private party"}] },

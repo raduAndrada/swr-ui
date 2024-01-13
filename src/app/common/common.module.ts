@@ -5,15 +5,10 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarModule, ButtonsModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ModalComponent } from './modal/modal.component';
-import { PopupComponent } from './modal/popup/popup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ConnectionService } from './connection.service';
-
 import { ConfirmationToastComponent } from './toast/confirmation-toast/confirmation-toast.component';
-import { ToastComponent } from './toast/toast.component';
-
 import { MdbNotificationModule } from 'mdb-angular-ui-kit/notification';
 import { MdbLightboxModule } from 'mdb-angular-ui-kit/lightbox';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
@@ -25,6 +20,7 @@ import { MdbTimepickerModule } from 'mdb-angular-ui-kit/timepicker';
 import { MdbSidenavModule } from 'mdb-angular-ui-kit/sidenav';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
+import { ImagesRestService } from './images.rest.service';
 
 
 
@@ -33,11 +29,7 @@ import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
   declarations: [
     MenuComponent,
     FooterComponent,
-    ModalComponent,
-    PopupComponent,
-    ConfirmationToastComponent,
-    ToastComponent
-
+    ConfirmationToastComponent
   ],
   imports: [
     BrowserModule,
@@ -56,17 +48,16 @@ import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
     MdbCarouselModule,
     MdbSidenavModule,
     MdbCollapseModule,
-    MdbPopoverModule 
+    MdbPopoverModule
 
   ],
-  providers: [MdbModalService, ConnectionService],
+  providers: [MdbModalService, ConnectionService, ImagesRestService],
   exports: [
     AppRoutingModule,
     BrowserModule,
     AppRoutingModule,
     NavbarModule,
     MenuComponent,
-    ModalComponent,
     FooterComponent,
     BrowserAnimationsModule,
     ButtonsModule,
@@ -82,7 +73,7 @@ import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
     MdbCarouselModule,
     MdbSidenavModule,
     MdbCollapseModule,
-    MdbPopoverModule 
+    MdbPopoverModule
   ]
 })
 export class CoreModule { }

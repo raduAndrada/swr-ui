@@ -1,52 +1,40 @@
-<div class="justify-content-center">
-    <div class="card col-4 offset-4">
-        <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp" class="img-fluid" />
-            <a href="#!">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-            </a>
+<div class="justify-content-center py-4 px-2">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-2 col-sm-12 offset-sm-2">
+            <div class="card-body">
+                <h5 class="card-title py-2" i18n="@@privateEventsTitle" >Book your Gram expedience now</h5>
+                <button class="btn btn-outline-dark py-2" (click)="openModal()" mdbRipple rippleColor="light"
+                    data-mdb-color="dark">Book Us</button>
+            </div>
+            <hr />
+            <ul class="list-group list-group-light mb-3">
+                <li class="list-group-item">
+                    <h5 class="fw-bold" i18n="@@privateEventsPartyTitle">Private party hosting</h5>
+                    <p class="text-muted mb-0" i18n="@@privateEventsPartyP1">
+                        We organize private parties for you and your crew. You come up with a reason to celebrate and
+                        take care of the rest.
+                        You can book the entire place for yourself (~25 seats) or you can reserve a table. 
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <h5 class="fw-bold" i18n="@@privateEventsCateringTitle" >Catering</h5>
+                    <p class="text-muted mb-0" i18n="@@privateEventsCateringP1">
+                        Maybe you have the place but you don't have the food. No worries, we can fix that for you. 
+                        We can prepare your food and deliver it to you. 
+                    </p>
+                </li>
+            </ul>
         </div>
-        <div class="card-body">
-            <h5 class="card-title text-center">Book your Gram expedience now</h5>
-            <button class="btn btn-outline-dark align-start" (click)="openModal()" mdbRipple rippleColor="light"
-                data-mdb-color="dark">Cattering</button>
-            <button class="btn btn-outline-dark float-end" (click)="openModal()" mdbRipple rippleColor="light"
-                data-mdb-color="dark">Private Event</button>
+        <div class="col-lg-4 col-sm-12 py-4">
+            <mdb-carousel *ngIf="eventsCarousel.length" [animation]="'fade'">
+                <mdb-carousel-item *ngFor="let event of eventsCarousel">
+                    <img [src]="'data:image/jpeg;base64,' + event.image" class="img-fluid" />
+                </mdb-carousel-item>
+            </mdb-carousel>
         </div>
-    </div>
-    <div class="col  padded-col col-8 offset-2">
-        <ul class="list-group list-group-light mb-3">
-            <li class="list-group-item">
-                <h5 class="fw-bold">Our company starts its operations</h5>
-                <p class="text-muted mb-2 fw-bold">11 March 2020</p>
-                <p class="text-muted mb-0">
-                    Some placeholder content in a paragraph relating to "Our company starts its operations". And some
-                    more content, used here just to pad out and fill this tab panel. In production, you would obviously
-                    have more real content here. And not just text. It could be anything, really. Text, images, forms.
-                </p>
-            </li>
-            <li class="list-group-item">
-                <h5 class="fw-bold">First customer</h5>
-                <p class="text-muted mb-2 fw-bold">19 March 2020</p>
-                <p class="text-muted mb-0">
-                    Some placeholder content in a paragraph relating to "First customer". And some more content,
-                    used here just to pad out and fill this tab panel. In production, you would obviously have more real
-                    content here. And not just text. It could be anything, really. Text, images, forms.
-                </p>
-            </li>
-            <li class="list-group-item">
-                <h5 class="fw-bold">Our team exceeds 10 people</h5>
-                <p class="text-muted mb-2 fw-bold">24 June 2020</p>
-                <p class="text-muted mb-0">
-                    Some placeholder content in a paragraph relating to "Our team exceeds 10 people". And some more
-                    content, used here just to pad out and fill this tab panel. In production, you would obviously
-                    have more real content here. And not just text. It could be anything, really. Text, images, forms.
-                </p>
-            </li>
-        </ul>
     </div>
 
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-md-4 card" *ngFor="let card of cardData">
             <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
                 <img src="{{card.src}}" class="img-fluid" />
@@ -65,6 +53,6 @@
         </div>
         <a class="btn btn-outline-dark btn-rounded w-100" color="blue-grey" role="button" (click)="openModal()">Book
             now</a>
-    </div>
+    </div> -->
     <br />
 </div>

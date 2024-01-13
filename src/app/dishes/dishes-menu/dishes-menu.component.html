@@ -1,54 +1,58 @@
-<mdb-carousel [controls]="true">
-  <mdb-carousel-item>
-    <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="..." />
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="..." />
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="..." />
-  </mdb-carousel-item>
-</mdb-carousel>
-<br />
-
-<div class="col-6 py-4 offset-3">
-  <mdb-tabs [justified]="true">
-    <mdb-tab *ngFor="let categ of menuCategories">
-      <ng-template mdbTabTitle>
-        <span (mouseenter)="startAnimation()">
-          <i class="fas {{categ.icon}} fa-fw me-2" [@pulse]="animationState" (@pulse.done)="onAnimationDone()">
-          </i>{{categ.name}}
-        </span>
-      </ng-template>
-      <div class="justify-content-center">
-        <ul class="list-group list-group-light" *ngFor="let item of dishesMenu.subcategoryMenu">
-          <li class="list-group-item px-3 border-0 " aria-current="true"
-            *ngIf="item.subcategory.category.name === categ.name">
-            <h4> <u>{{item.subcategory.name}}</u> </h4>
-            <div *ngFor="let dish of item.dishes">
-              <h6><b>{{dish.name}}</b></h6>
-              <p class="small" style="margin-bottom: 0;"><span *ngFor="let ingredient of dish.ingredients; let i = index"
+<div class=" row">
+  <div class="col-lg-6 py-2 offset-lg-1 col-sm-12 offset-sm-0">
+    <!-- <mdb-tabs [justified]="true" #tabs>
+      <mdb-tab *ngFor="let categ of menuCategories">
+        <ng-template mdbTabTitle>
+          <span (mouseenter)="startAnimation()">
+            <i class="fas {{categ.icon}} fa-fw me-2" [@pulse]="animationState" (@pulse.done)="onAnimationDone()">
+            </i>{{categ.name}}
+          </span>
+        </ng-template>
+        <div class="justify-content-center">
+          <ul class="list-group list-group-light" *ngFor="let item of dishesMenu.subcategoryMenu">
+            <li class="list-group-item px-3 border-0 " aria-current="true"
+              *ngIf="item.subcategory.category.name === categ.name">
+              <h4> <u>{{item.subcategory.name}}</u> </h4>
+              <div *ngFor="let dish of item.dishes">
+                <p class="py-0 my-0"><b>{{dish.name}}</b> <small> {{dish.price}} lei </small>
+                  <small *ngIf="dish.quantity"> - {{dish.quantity}}</small></p>
+                <p class="small py-0 my-0" >
+                  <small> {{dish.description}} </small>
+                </p> -->
+    <!--uncomment for sizes value-->
+    <!-- <p class="small" style="margin-bottom: 0;"><span *ngFor="let ingredient of dish.ingredients; let i = index"
                   [attr.data-index]="i">
                   {{ingredient.shortName}} <small>{{ingredient.quantity}} {{ingredient.um}}</small><span
-                    *ngIf="i < dish.ingredients.length - 1"> ,</span></span> </p>
-              <a *ngIf="dish.nutritionalValue" type="button" [mdbPopover]="template"
-                mdbPopoverHeader="Nutritional Values" trigger="focus" tabindex="0">
-                <span class="small text-muted" style="font-size: xx-small;">Nutritional values</span> </a>
-              <ng-template #template>
-                <p class="small text-muted">
-                  Energy {{dish.nutritionalValue.kcal}}/{{dish.nutritionalValue.kj}} (kcal/kj)
+                    *ngIf="i < dish.ingredients.length - 1"> ,</span></span> </p> -->
+    <!-- <a *ngIf="dish.nutritionalValue" type="button" [mdbPopover]="template"
+                  mdbPopoverHeader="Nutritional Values" trigger="focus" tabindex="0">
+                  <span class="small text-muted" style="font-size: xx-small;">Nutritional values</span> </a>
+                <ng-template #template>
+                  <p class="small text-muted">
+                    Energy {{dish.nutritionalValue.kcal}}/{{dish.nutritionalValue.kj}} (kcal/kj)
+                  </p> -->
+    <!--uncomment for nutritional value-->
+    <!-- <span *ngFor="let nv of item.nutritionalValue.values| keyvalue">{{nv.key}}{{nv.value}}</span> -->
+    <!-- </ng-template> -->
+    <!--uncomment for subcategory-->
+    <!-- <p class="small text-muted"  style="font-size: small;"> {{item.subcategory}} </p> -->
+    <!-- <p class="small" style="font-size: small;">
+                  <span *ngFor="let label of dish.labels" class="badge rounded-pill badge-info">{{label}}</span>
                 </p>
-                <!-- <span *ngFor="let nv of item.nutritionalValue.values| keyvalue">{{nv.key}}{{nv.value}}</span> -->
-              </ng-template>
-              <!-- <p class="small text-muted"  style="font-size: small;"> {{item.subcategory}} </p> -->
-              <p class="small" style="font-size: small;">
-                <span *ngFor="let label of dish.labels" class="badge rounded-pill badge-info">{{label}}</span>
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
+              </div>
+            </li>
+          </ul>
+        </div>
 
-    </mdb-tab>
-  </mdb-tabs>
+      </mdb-tab>
+    </mdb-tabs> -->
+    <p><a href="https://erp.foodostech.com/caffee/oatt/11x0/0bfae9110c1068fa329def869c300cdecd5247e4/#categorie31" target="_blank" rel="noopener noreferrer" i18n="@@menuLink"> Consult our menu here.</a></p>
+  </div>
+  <div class="col-lg-4 col-sm-12 py-4">
+    <mdb-carousel *ngIf="dishesMenuCarousel.length" [animation]="'fade'">
+      <mdb-carousel-item *ngFor="let dishImage of dishesMenuCarousel">
+        <img [src]="'data:image/jpeg;base64,' + dishImage.image" class="img-fluid" />
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
 </div>

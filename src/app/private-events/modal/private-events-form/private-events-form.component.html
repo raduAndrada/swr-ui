@@ -1,6 +1,6 @@
 <!-- Default form contact -->
 <form class="text-center border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <p class="h4 mb-4">Book a private private event</p>
+  <p class="h4 mb-4">Book Gram</p>
   <!-- Name -->
   <input *ngFor="let privateEventInput of privateEventInputContactForm" type="{{privateEventInput.type}}"
     formControlName="{{privateEventInput.controlName}}" id="{{privateEventInput.controlName}}" mdbInput
@@ -11,7 +11,7 @@
     <option value="" disabled>Choose option</option>
     <option *ngFor="let option of contactFormSelectEventType.options" value="{{option.value}}">{{option.text}}</option>
   </select>
-
+<!-- 
   <mdb-form-control class="form-control mb-4">
     <input mdbInput [mdbDatepicker]="datepicker" type="text" class="form-control" id="{{datePicker.controlName}}"
       formControlName="{{datePicker.controlName}}" />
@@ -36,18 +36,18 @@
     <mdb-timepicker-toggle [mdbTimepickerToggle]="endTimepicker"></mdb-timepicker-toggle>
     <mdb-timepicker #endTimepicker >
     </mdb-timepicker>
-  </mdb-form-control>
+  </mdb-form-control> -->
 
   <input *ngFor="let privateEventInput of privateEventInput3rdForm" type="{{privateEventInput.type}}"
     formControlName="{{privateEventInput.controlName}}" id="{{privateEventInput.controlName}}" mdbInput
     class="form-control mb-4" placeholder="{{privateEventInput.placeholder}}">
 
-  <label>{{contactFormSelectEventSource.label}}</label>
+  <!-- <label>{{contactFormSelectEventSource.label}}</label>
   <select formControlName="{{contactFormSelectEventSource.controlName}}" class="browser-default custom-select mb-4">
     <option value="" disabled>Choose option</option>
     <option *ngFor="let option of contactFormSelectEventSource.options" value="{{option.value}}">{{option.text}}
     </option>
-  </select>
+  </select> -->
 
   <!-- Send button -->
   <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect

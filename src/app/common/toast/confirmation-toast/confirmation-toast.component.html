@@ -6,7 +6,7 @@
   aria-atomic="true"
 >
   <div class="toast-header toast-light">
-    <strong class="me-auto">Request sent</strong>
+    <strong class="me-auto">{{toastTitle}}</strong>
     <button
       type="button"
       class="btn-close"
@@ -14,5 +14,5 @@
       (click)="notificationRef.close()"
     ></button>
   </div>
-  <div class="toast-body">Someone will contact you immediatly</div>
+  <div class="toast-body">{{toastMessage}}</div>
 </div>

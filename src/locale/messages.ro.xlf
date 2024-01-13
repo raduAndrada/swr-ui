@@ -1,15 +1,118 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template" target-language="ro">
+  <file source-language="ro" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="3492007542396725315" datatype="html">
-        <source>Welcome</source>
-        <target>Salut</target>
+      <trans-unit id="aboutGramHeader" datatype="html">
+        <source>Despre Gram</source>
+          <target>/ro/portfolio</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">312</context>
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">4</context>
         </context-group>
-        <note priority="1" from="description">Friendly welcoming message</note>
+      </trans-unit>
+      <trans-unit id="aboutIntroP1" datatype="html">
+        <source>Suntem o mica afacere de familie si restaurantul acesta este visul nostru.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP2" datatype="html">
+        <source>Noi nu ne propunem sa va servim doar mancare, ne dorim sa va oferim o expedienta. Iti promitem ca nu o sa te vrajim prin cuvinte pompoase ci iti vom pune la dispozitie preparatele noastre (care vorbesc pentru noi mai bine decat ar putea-o face cuvintele noastre). </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP3" datatype="html">
+        <source>Cea mai simpla si eficienta modalitate de a afla cine suntem este sa ne vizitati aici <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;text-muted&quot; style=&quot;text-decoration: none;&quot; href=&quot;{{contact.location.googleLink}}&quot;&gt;"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>Gram<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP4" datatype="html">
+        <source>In spatele cortinelor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP5" datatype="html">
+        <source>Cateva detalii despre cine va prepara mancarea nu strica. Bucatarul sef, Gabriel, activeaza in acest domeniu de ceva vreme. In trecutul nu foarte indepartat a facut parte din echipa de bucatari al unui restaurant decorat cu stele Michelin din Anglia. Revenit in tara, si-a propus sa aduca bucataria noastra la un nivel cat mai inalt. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">17,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP6" datatype="html">
+        <source>Social Media</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP7" datatype="html">
+        <source>Postam detalii despre program, meniu si oferte speciale pe platformele noastre de socializare </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menuLink" datatype="html">
+        <source> Puteti sa ne consultati meniul aici. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dishes/dishes-menu/dishes-menu.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsTitle" datatype="html">
+        <source>Nu mai sta pe ganduri, rezerva-ti locul</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsPartyTitle" datatype="html">
+        <source>Petreceri private</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsPartyP1" datatype="html">
+        <source> Organizam petreceri private pentru tine si pentru grupul tau. Tot ce trebuie sa faci este sa ai un motiv de sarbatoare si noi ne ocupam de restul. Se poate inchiria intregul restaurant (~25 locuri) sau iti poti rezerva o masa. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">13,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsCateringTitle" datatype="html">
+        <source>Catering</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsCateringP1" datatype="html">
+        <source> Poate ai o locatie rezervata dar, nu ai mancarea potrivita. Nici o grija, ne ocupam noi. Putem sa-ti pregatim mancarea si sa ti-o aducem. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">21,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="trendingTitle" datatype="html">
+        <source>Ultimele evenimente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/trending/trending.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="trendingReadMore" datatype="html">
+        <source>Citeste mai mult</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/trending/trending.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
       </trans-unit>
     </body>
   </file>

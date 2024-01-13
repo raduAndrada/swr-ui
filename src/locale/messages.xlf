@@ -2,13 +2,117 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="3492007542396725315" datatype="html">
-        <source>Welcome</source>
+      <trans-unit id="aboutGramHeader" datatype="html">
+        <source>Gram experience</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">312</context>
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">4</context>
         </context-group>
-        <note priority="1" from="description">Friendly welcoming message</note>
+      </trans-unit>
+      <trans-unit id="aboutIntroP1" datatype="html">
+        <source>We&apos;re a small family business and this restuarant is our dream.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP2" datatype="html">
+        <source>We want to serve more than just your food, we want to give you an unique experience. Instead of trying to wow you with fancy words and long stories, we&apos;d like to let our food speak for itself. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP3" datatype="html">
+        <source>So the easiest way to find out what we&apos;re about is to come at <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;text-muted&quot; style=&quot;text-decoration: none;&quot; href=&quot;{{contact.location.googleLink}}&quot;&gt;"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>Gram<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/><x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP4" datatype="html">
+        <source>Behind the concept</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP5" datatype="html">
+        <source>It&apos;s always good to know who&apos;s making the food for you. Our Head Chef, Gabriel has worked in this industry for a while now. He&apos;s been a part of the crew of Michelin Star Restaurant and more recently he&apos;s been the head chef of Casa Boema. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">17,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP6" datatype="html">
+        <source>Our Social Media</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutIntroP7" datatype="html">
+        <source>We post daily updates about our food, schedule, promotions and more on our social media platforms. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menuLink" datatype="html">
+        <source> Consult our menu here.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dishes/dishes-menu/dishes-menu.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsTitle" datatype="html">
+        <source>Book your Gram expedience now</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsPartyTitle" datatype="html">
+        <source>Private party hosting</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsPartyP1" datatype="html">
+        <source> We organize private parties for you and your crew. You come up with a reason to celebrate and take care of the rest. You can book the entire place for yourself (~25 seats) or you can reserve a table. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">13,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsCateringTitle" datatype="html">
+        <source>Catering</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsCateringP1" datatype="html">
+        <source> Maybe you have the place but you don&apos;t have the food. No worries, we can fix that for you. We can prepare your food and deliver it to you. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">21,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="trendingTitle" datatype="html">
+        <source>Recent Updates</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/trending/trending.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="trendingReadMore" datatype="html">
+        <source>Read more</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/trending/trending.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
       </trans-unit>
     </body>
   </file>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MdbNotificationRef } from 'mdb-angular-ui-kit/notification';
 
 @Component({
@@ -7,6 +7,10 @@ import { MdbNotificationRef } from 'mdb-angular-ui-kit/notification';
   styleUrls: ['./confirmation-toast.component.scss']
 })
 export class ConfirmationToastComponent {
+ 
+  toastTitle!: string;
+
+  toastMessage!: string;
 
   constructor(public notificationRef: MdbNotificationRef<ConfirmationToastComponent>) {}
 }
