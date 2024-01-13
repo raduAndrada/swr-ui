@@ -86,10 +86,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "swr-ui:build:production,ro"
+              "buildTarget": "swr-ui:build:production,ro"
             },
             "development": {
-              "browserTarget": "swr-ui:build:development,ro"
+              "buildTarget": "swr-ui:build:development,ro"
             }
           },
           "defaultConfiguration": "development"
@@ -97,9 +97,9 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "swr-ui:build",
             "format": "xlf",
-            "outputPath": "src/locale"
+            "outputPath": "src/locale",
+            "buildTarget": "swr-ui:build"
           }
         },
         "test": {
