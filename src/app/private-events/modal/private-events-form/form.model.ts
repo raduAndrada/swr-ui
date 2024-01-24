@@ -31,30 +31,30 @@ export interface DatepickerInput {
 
 
 export const privateEventInputContactForm: InputDetails[] = [
-    { type: "text", controlName: "contactFormName", placeholder: "Your Name" },
-    { type: "email", controlName: "contactFormEmail", placeholder: "Your Email" },
-    { type: "tel", controlName: "contactFormTel", placeholder: "Your Phone" },
-    { type: "text", controlName: "contactFormCompany", placeholder: "Your Company's name" },
+    { type: "text", controlName: "contactFormName", placeholder: $localize `Your Name` },
+    { type: "email", controlName: "contactFormEmail", placeholder: $localize`Your Email` },
+    { type: "tel", controlName: "contactFormTel", placeholder: $localize`Your Phone` },
+    { type: "text", controlName: "contactFormCompany", placeholder: $localize`Your Company's name` },
 ]
 
 export const privateEventType: SelectDetails[] = [
     { value: "1", text: "Catering" },
-    { value: "2", text: "Hosting" }
+    { value: "2", text: $localize `Private Party` }
 ]
 
 export const contactFormSelectEventType: SelectInput = {
-    controlName: "contactFormPartyType", options: privateEventType, label: "Type of event"
+    controlName: "contactFormPartyType", options: privateEventType, label: $localize `Type of event`
 }
 
 export const privateEventInput3rdForm: InputDetails[] = [
-    { type: "number", controlName: "contactNumberOfPeople", placeholder: "Number of people" },
-    { type: "text", controlName: "contactRequestDate", placeholder: "Request a date" },
-    { type: "textarea", controlName: "contactAdditionalInfo", placeholder: "Additional information" }
+    { type: "number", controlName: "contactNumberOfPeople", placeholder: $localize `Number of people` },
+    { type: "text", controlName: "contactRequestDate", placeholder: $localize `Request a date` },
+    { type: "textarea", controlName: "contactAdditionalInfo", placeholder: $localize `Additional information` }
 ]
 
 
 export const privateEventSource: SelectDetails[] = [
-    { value: "1", text: "Someone told me about you" },
+    { value: "1", text: $localize `Someone told me about you` },
     { value: "2", text: "Website" },
     { value: "3", text: "Google" },
     { value: "4", text: "Social Media" },
@@ -62,7 +62,7 @@ export const privateEventSource: SelectDetails[] = [
 ]
 
 export const contactFormSelectEventSource: SelectInput = {
-    controlName: "contactPrivateEventSource", options: privateEventSource, label: "Where did you find out about us?"
+    controlName: "contactPrivateEventSource", options: privateEventSource, label: $localize `Where did you find out about us?`
 }
 
 export const timePickers: TimepickerInput[] = [
@@ -71,7 +71,7 @@ export const timePickers: TimepickerInput[] = [
 ]
 
 export const datePicker: DatepickerInput = {
-    controlName: "datepickerControl", label: "Select Date"
+    controlName: "datepickerControl", label: $localize `Select Date`
 }
 
 

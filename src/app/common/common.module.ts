@@ -6,7 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarModule, ButtonsModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ConnectionService } from './connection.service';
 import { ConfirmationToastComponent } from './toast/confirmation-toast/confirmation-toast.component';
 import { MdbNotificationModule } from 'mdb-angular-ui-kit/notification';
@@ -20,7 +20,10 @@ import { MdbTimepickerModule } from 'mdb-angular-ui-kit/timepicker';
 import { MdbSidenavModule } from 'mdb-angular-ui-kit/sidenav';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
+import {MdbDropdownModule} from 'mdb-angular-ui-kit/dropdown';
 import { ImagesRestService } from './images.rest.service';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 
@@ -48,7 +51,15 @@ import { ImagesRestService } from './images.rest.service';
     MdbCarouselModule,
     MdbSidenavModule,
     MdbCollapseModule,
-    MdbPopoverModule
+    MdbPopoverModule,
+    MdbDropdownModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpLoaderClient,
+        deps: [HttpClient]
+      }
+    })
 
   ],
   providers: [MdbModalService, ConnectionService, ImagesRestService],
@@ -73,7 +84,12 @@ import { ImagesRestService } from './images.rest.service';
     MdbCarouselModule,
     MdbSidenavModule,
     MdbCollapseModule,
-    MdbPopoverModule
+    MdbPopoverModule,
+    TranslateModule
   ]
 })
 export class CoreModule { }
+
+export function httpLoaderClient(http: HttpClient) {
+  return new TranslateHttpLoader(http, `../../assets/i18n/`, `.json`);
+}

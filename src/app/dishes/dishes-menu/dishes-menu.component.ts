@@ -38,22 +38,20 @@ export class DishesMenuComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit() {
-    this.trendingService.getCategories()
-      .subscribe(categories => {
-        this.menuCategories = categories;
-      });
+    // this.trendingService.getCategories()
+    //   .subscribe(categories => {
+    //     this.menuCategories = categories;
+    //   });
 
-    this.trendingService.getMenu()
-      .subscribe(menu => {
-        this.dishesMenu = menu;
-      });
+    // this.trendingService.getMenu()
+    //   .subscribe(menu => {
+    //     this.dishesMenu = menu;
+    //   });
     const origin = 'dishes-menu::carousel';
 
     this.imagesRest.findAllByOrigin(origin)
       .subscribe(dishesMenuCarousel => {
         this.dishesMenuCarousel = dishesMenuCarousel;
-        console.log(this.dishesMenuCarousel);
-
       });
   }
 

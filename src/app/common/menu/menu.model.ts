@@ -9,14 +9,14 @@ export interface MenuItem {
 
 
 export const menuItems: MenuItem [] = [
-    {name: "Our Menu", link: "/menu", icon: "fa-book-open"},
-    {name: "Our Story", link: "/about"},
-    {name: "Book your Gram expedience", link: "/private-events", icon: "fa-calendar-check",
+    {name: $localize`Our Menu`, link: "/menu", icon: "fa-book-open"},
+    {name: $localize`Our Story`, link: "/about"},
+    {name: $localize`Book your Gram expedience`, link: "/private-events", icon: "fa-calendar-check",
         submenu: [
-            {name: "Catering"},
-            {name: "Private party"}] },
-    {name: "Trending", link: "/trending", icon: "fa-timeline"},
-    {name: "Gallery", link: "/gallery", icon: "fa-images"},
+            {name: $localize`Catering`},
+            {name: $localize`Private party`}] },
+    {name: $localize`Trending`, link: "/trending", icon: "fa-timeline"},
+    {name: $localize`Gallery`, link: "/gallery", icon: "fa-images"},
     // {name: "Reservations", link: "/reservations"},
 
 ]

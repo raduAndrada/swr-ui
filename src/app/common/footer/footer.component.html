@@ -1,9 +1,9 @@
 <!-- Footer -->
-<footer class="page-footer pt-2">
+<footer class="page-footer py-2 px-2">
     <div class="container-fluid text-center ">
         <!-- Grid row -->
-        <div class="row align-items-start">
-            <div class="col-5 text-left" >
+        <div class="row">
+            <div class="col-2 text-left" >
                 <ul class="list-inline">
                     <li class="list-inline-item" *ngFor="let socialLink of socialLinks"> <a href="{{socialLink.link}}" 
                         >
@@ -11,11 +11,13 @@
                         </a></li>
                 </ul>
             </div>
-            <div class="col-5 offset-2 text-right">
-                <ul class="list-inline">
-                    <li class="list-inline-item" *ngFor="let additionalLink of additionalLinks"> <a href="{{additionalLink.link}}">
+            <div class="col-10 text-right">
+                <ul >
+                    <li class="list-inline-item" *ngFor="let additionalLink of additionalLinks"> 
+                        <a href="{{additionalLink.link}}">
                             {{additionalLink.name}}
-                        </a></li>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!-- Grid column -->

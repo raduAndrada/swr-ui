@@ -18,8 +18,6 @@ export class GalleryComponent implements OnInit {
     this.imagesRest.findAllByOrigin(origin)
       .subscribe(gallery => {
         this.gallery = gallery;
-        console.log(this.gallery);
-
       });
   }
   

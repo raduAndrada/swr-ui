@@ -6,7 +6,7 @@
     "swr-ui": {
       "projectType": "application",
       "i18n": { 
-        "sourceLocale": "en-US", 
+        "sourceLocale": "en", 
         "locales": { 
           "ro": { 
             "translation": "src/locale/messages.ro.xlf" 

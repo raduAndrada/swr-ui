@@ -9,6 +9,7 @@ import { PrivateEventsModalComponent } from './private-events/modal/private-even
 import { PrivateEventsForm } from './private-events/modal/private-events-form/private-events-form.component';
 import { TrendingModule } from './trending/trending.module';
 import { AboutModule } from './about/about.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AboutModule } from './about/about.module';
     CoreModule,
     DishesModule,
     TrendingModule, 
-    AboutModule
+    AboutModule,
+    TranslateModule.forRoot()
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'ro' }],
   bootstrap: [AppComponent]
