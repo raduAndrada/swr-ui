@@ -10,10 +10,9 @@ export const environment = {
       serverPort: "http://ec2-18-153-93-71.eu-central-1.compute.amazonaws.com:8901/api/",
       dishesApi: "dishes",
     },
-    payments:{
+    commonicationChannel: {
       serverPort: "http://ec2-18-153-93-71.eu-central-1.compute.amazonaws.com:8902/api/",
-      paymentsApi: "payments",
-      payU: "TODO"
+      emailApi: "communication-channel/email/reservations"
     }
   };
 

@@ -20,7 +20,8 @@
             <img id="Gram Logo" src="./assets/logo.png" alt="Gram Logo" draggable="false" />
         </a>
         <div mdbDropdown class="btn-group justify-content-center">
-            <button type="button" class="btn btn-primary" data-mdb-tooltip-init title="{{ selectLanguage}}">{{ curentLanguage}}</button>
+            <button type="button" class="btn btn-primary" data-mdb-tooltip-init title="{{ selectLanguage}}">{{
+                curentLanguage}}</button>
             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" mdbDropdownToggle
                 aria-expanded="'false'">
                 <span class="visually-hidden">Toggle Dropdown</span>
@@ -28,8 +29,10 @@
 
             <ul mdbDropdownMenu class="dropdown-menu">
                 <li *ngFor="let language of allLanguages">
-                    <a class="dropdown-item" (click)="changeLanguage(language)" href="/{{language}}/{{getCurrentRoute()}}">{{language}}</a></li>
-              </ul>
+                    <a class="dropdown-item" (click)="changeLanguage(language)"
+                        href="/{{language}}/{{getCurrentRoute()}}">{{language}}</a>
+                </li>
+            </ul>
         </div>
         <ul class="list-inline text-center">
             <li class="list-inline-item" *ngFor="let socialLink of socialLinks">
@@ -58,8 +61,8 @@
                 </mdb-sidenav-item>
             </ng-container>
         </ul>
-        <div class="px-4 pb-5">
-            <hr class="mb-4 mt-0" />
+        <div class="col-12 px-4 pb-5">
+            <hr class="mb-4 mt-0 mx-4" />
             <p class="small text-muted" style="font-size: small;"><a class="text-decoration-none"
                     href="{{contact.location.googleLink}}">
                     {{contact.location.address}} </a>
@@ -87,7 +90,9 @@
             </div>
             <hr class="my-3" />
         </div>
-        <router-outlet></router-outlet>
+        <div class="container-fluid px-2 py-2 justify-content-center">
+            <router-outlet></router-outlet>
+        </div>
         <div class="fixed-action-btn" id="fixed1">
             <a class="btn btn-danger btn-floating" data-mdb-ripple-color="dark" #btnBackToTop (click)="scrollToTop()"
                 [ngStyle]="{'display': display}" id="btnBackToTop">

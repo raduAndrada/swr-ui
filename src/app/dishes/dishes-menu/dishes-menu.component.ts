@@ -56,9 +56,9 @@ export class DishesMenuComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.tabs.setActiveTab(0);
-    }, 0);
+    // setTimeout(() => {
+    //   this.tabs.setActiveTab(0);
+    // }, 0);
   }
 
 

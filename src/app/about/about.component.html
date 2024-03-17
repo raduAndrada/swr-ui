@@ -1,45 +1,45 @@
-<div class="justify-content-center py-2 px-2">
-  <div class="row">
-    <div class="col-lg-4 offset-lg-2 col-sm-12">
-      <h3 i18n="@@aboutGramHeader">Gram experience</h3>
-      <hr class="my-1" />
-      <p i18n="@@aboutIntroP1">We're a small family business and this restuarant is our dream.</p>
-      <p i18n="@@aboutIntroP2">We want to serve more than just your food, we want to give you an unique experience. Instead of trying to wow
-        you with
-        fancy words and long stories, we'd like to let our food speak for itself.
-      </p>
-      <p i18n="@@aboutIntroP3">So the easiest way to find out what we're about is to come at 
-          <a class="text-muted" style="text-decoration: none;" href="{{contact.location.googleLink}}"><i>Gram</i>
-          </a>
-      </p>
-      <hr class="my-1" />
-      <p class="lead" i18n="@@aboutIntroP4">Behind the concept</p>
-      <p i18n="@@aboutIntroP5">It's always good to know who's making the food for you. Our Head Chef, Gabriel
-        has
-        worked in this industry for a while now. He's been a part of the crew of Michelin Star Restaurant and more
-        recently
-        he's been the head chef of Casa Boema. </p>
-      <hr class="my-1" />
-      <p class="lead" i18n="@@aboutIntroP6">Our Social Media</p>
-      <p i18n="@@aboutIntroP7">We post daily updates about our food, schedule, promotions and more on our social media platforms. </p>
-      <ul class="list-inline">
-        <li class="list-inline-item" *ngFor="let socialLink of socialLinks">
-          <a href="{{socialLink.link}}" [style]="'color:'+socialLink.color">
-            <i class="{{socialLink.name}} fa-2x"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- maybe extract a different component for this -->
-    <!-- TODO -->
-    <div class="col-lg-6 col-sm-12">
-      <mdb-carousel *ngIf="aboutCarousel.length" class="carousel slide carousel-fade" [animation]="'fade'"
-        [interval]="3000">
-        <mdb-carousel-item *ngFor="let about of aboutCarousel">
-          <img [src]="'data:image/jpeg;base64,' + about.image" class="img-fluid" />
-        </mdb-carousel-item>
-      </mdb-carousel>
-    </div>
+<div class="row">
+  <div class="col-lg-4 offset-lg-2 col-sm-12">
+    <h3 i18n="@@aboutGramHeader">Gram experience</h3>
+    <hr class="my-1" />
+    <p i18n="@@aboutIntroP1">We're a small family business and this restuarant is our dream.</p>
+    <p i18n="@@aboutIntroP2">We want to serve more than just your food, we want to give you an unique experience.
+      Instead of trying to wow
+      you with
+      fancy words and long stories, we'd like to let our food speak for itself.
+    </p>
+    <p i18n="@@aboutIntroP3">So the easiest way to find out what we're about is to come at
+      <a class="text-muted" style="text-decoration: none;" href="{{contact.location.googleLink}}"><i>Gram</i>
+      </a>
+    </p>
+    <hr class="my-1" />
+    <p class="lead" i18n="@@aboutIntroP4">Behind the concept</p>
+    <p i18n="@@aboutIntroP5">It's always good to know who's making the food for you. Our Head Chef, Gabriel
+      has
+      worked in this industry for a while now. He's been a part of the crew of Michelin Star Restaurant and more
+      recently
+      he's been the head chef of Casa Boema. </p>
+    <hr class="my-1" />
+    <p class="lead" i18n="@@aboutIntroP6">Our Social Media</p>
+    <p i18n="@@aboutIntroP7">We post daily updates about our food, schedule, promotions and more on our social media
+      platforms. </p>
+    <ul class="list-inline">
+      <li class="list-inline-item" *ngFor="let socialLink of socialLinks">
+        <a href="{{socialLink.link}}" [style]="'color:'+socialLink.color">
+          <i class="{{socialLink.name}} fa-2x"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- maybe extract a different component for this -->
+  <!-- TODO -->
+  <div class="col-lg-6 col-sm-12">
+    <mdb-carousel *ngIf="aboutCarousel.length" class="carousel slide carousel-fade" [animation]="'fade'"
+      [interval]="3000">
+      <mdb-carousel-item *ngFor="let about of aboutCarousel">
+        <img [src]="'data:image/jpeg;base64,' + about.image" class="img-fluid" />
+      </mdb-carousel-item>
+    </mdb-carousel>
   </div>
 
 </div>

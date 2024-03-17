@@ -6,21 +6,21 @@
         <source>Gram experience</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutIntroP1" datatype="html">
         <source>We&apos;re a small family business and this restuarant is our dream.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutIntroP2" datatype="html">
         <source>We want to serve more than just your food, we want to give you an unique experience. Instead of trying to wow you with fancy words and long stories, we&apos;d like to let our food speak for itself. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
-          <context context-type="linenumber">7,10</context>
+          <context context-type="linenumber">6,10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutIntroP3" datatype="html">
@@ -55,7 +55,7 @@
         <source>We post daily updates about our food, schedule, promotions and more on our social media platforms. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">24,25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4891699570527405204" datatype="html">
@@ -275,46 +275,60 @@
           <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="1249662840891380215" datatype="html">
+        <source>Request Recieved</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/modal/private-events-form/private-events-form.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1142551762494580281" datatype="html">
+        <source>Someone will contact you soon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/modal/private-events-form/private-events-form.component.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="privateEventsTitle" datatype="html">
         <source>Book your Gram expedience now</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privateEventsBookButton" datatype="html">
         <source>Book Us</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privateEventsPartyTitle" datatype="html">
         <source>Private party hosting</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privateEventsPartyP1" datatype="html">
         <source> We organize private parties for you and your crew. You come up with a reason to celebrate and take care of the rest. You can book the entire place for yourself (~25 seats) or you can reserve a table. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">13,17</context>
+          <context context-type="linenumber">12,16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privateEventsCateringTitle" datatype="html">
         <source>Catering</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privateEventsCateringP1" datatype="html">
         <source> Maybe you have the place but you don&apos;t have the food. No worries, we can fix that for you. We can prepare your food and deliver it to you. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">21,24</context>
+          <context context-type="linenumber">20,23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="trendingTitle" datatype="html">

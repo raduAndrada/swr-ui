@@ -4,5 +4,6 @@ export const additional_links: MenuItem[] = [
     {link: "", name: $localize`Contact`},
     {link: "", name: $localize`Careers`},
     {link: "", name: $localize`Newsletter`},
-    {link: "", name: $localize`Privacy Policy`},
+    {link: "https://www.iubenda.com/privacy-policy/39041614", name: $localize`Privacy Policy`},
 ]
+

@@ -1,13 +1,10 @@
-<div class="container justify-content-center py-4 px-2">
-  <mdb-lightbox class="lightbox">
-    <div class="row" *ngIf="gallery.length">
-      <div class="col-4 text-center" *ngFor="let image of gallery">
-        <img mdbLightboxItem [src]="'data:image/jpeg;base64,' + image.image"
-          class="img-fluid shadow-1-strong rounded" />
-        <hr />
-      </div>
-
+<mdb-lightbox class="lightbox">
+  <div class="row" *ngIf="gallery.length">
+    <div class="col-4 text-center" *ngFor="let image of gallery">
+      <img mdbLightboxItem [src]="'data:image/jpeg;base64,' + image.image" class="img-fluid shadow-1-strong rounded" />
+      <hr />
     </div>
 
-  </mdb-lightbox>
-</div>
+  </div>
+
+</mdb-lightbox>

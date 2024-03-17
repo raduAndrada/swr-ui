@@ -20,7 +20,7 @@
       </trans-unit>
       <trans-unit id="aboutIntroP2" datatype="html">
         <source>We want to serve more than just your food, we want to give you an unique experience. Instead of trying to wow you with fancy words and long stories, we&apos;d like to let our food speak for itself. </source>
-        <target>Noi nu ne propunem sa iti servim doar mancare, ne dorim sa iti oferim o expedienta unica. Nu o sa te vrajim prin cuvinte pompoase ci iti vom pune la dispozitie preparatele noastre (ele vorbesc pentru noi mai bine decat ar putea-o noi face). </target>
+        <target>Noi nu ne propunem sa iti servim doar mancare, ne dorim sa iti oferim o expedienta unica. Nu o sa te vrajim prin cuvinte pompoase ci iti vom pune la dispozitie preparatele noastre (ele vorbesc pentru noi mai bine decat am putea-o face noi). </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/about/about.component.html</context>
           <context context-type="linenumber">7,10</context>
@@ -377,6 +377,23 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/menu/menu.component.ts</context>
           <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+
+    <trans-unit id="1249662840891380215" datatype="html">
+        <source>Request Recieved</source>
+        <target>Cererea a fost primita</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/modal/private-events-form/private-events-form.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+    <trans-unit id="1142551762494580281" datatype="html">
+        <source>Someone will contact you soon</source>
+        <target>Veti fi contactat pentru confirmare in curand</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/modal/private-events-form/private-events-form.component.ts</context>
+          <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
     </body>

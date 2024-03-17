@@ -2,6 +2,8 @@ import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
 import { MdbNotificationRef, MdbNotificationService } from 'mdb-angular-ui-kit/notification';
+import { ReservationConfirmation } from 'src/app/common/common.model';
+import { ReservationConfirmationRestService } from 'src/app/common/reservation-confirmation.rest.service';
 import { PrivateEventsModalComponent } from 'src/app/private-events/modal/private-events-modal.component';
 import { ConnectionService } from '../../../common/connection.service';
 import { ConfirmationToastComponent } from '../../../common/toast/confirmation-toast/confirmation-toast.component';
@@ -12,7 +14,7 @@ import { allFormFields, contactFormSelectEventSource, contactFormSelectEventType
   templateUrl: './private-events-form.component.html'
 })
 export class PrivateEventsForm {
-  
+
   contactForm: FormGroup;
   disabledSubmitButton: boolean = true;
   notificationRef: MdbNotificationRef<ConfirmationToastComponent> | null = null;
@@ -34,24 +36,24 @@ export class PrivateEventsForm {
     }
   }
 
-  @Output() 
+  @Output()
   closeModalEventEmitter = new EventEmitter<boolean>();
 
 
-  constructor(private fb: FormBuilder, 
-    private connectionService: ConnectionService, 
+  constructor(private fb: FormBuilder,
+    private reservationConfirmationRestService: ReservationConfirmationRestService,
     private notificationService: MdbNotificationService,
     public modalRef: MdbModalRef<PrivateEventsModalComponent>) {
-    
+
 
     this.contactForm = fb.group({
       'contactFormName': ['', Validators.required],
       'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
       'contactFormTel': ['', Validators.required],
-      'contactFormCompany': ['', Validators.required],
+      'contactFormCompany': [''],
       'contactFormPartyType': ['', Validators.required],
-      'contactRequestDate': [''],
-      'contactNumberOfPeople': [''],
+      'contactRequestDate': ['', Validators.required],
+      'contactNumberOfPeople': ['', Validators.compose([Validators.required, Validators.min(1)])],
       'contactAdditionalInfo': [''],
       // 'contactPrivateEventSource': [''],
       // 'startTimeControl': ['06:00 PM', Validators.required],
@@ -61,10 +63,25 @@ export class PrivateEventsForm {
   }
 
   onSubmit() {
-    this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
-      alert('The request was received. Someone will contact you soon.');
+    const reservation: ReservationConfirmation = Object.assign({
+      name: this.contactForm.get("contactFormName")?.value,
+      email: this.contactForm.get("contactFormEmail")?.value,
+      tel: this.contactForm.get("contactFormTel")?.value,
+      company: this.contactForm.get("contactFormCompany")?.value,
+      requestDate: this.contactForm.get("contactRequestDate")?.value,
+      noOfPeople: this.contactForm.get("contactNumberOfPeople")?.value,
+      additionalInfo: this.contactForm.get("contactAdditionalInfo")?.value
+    });
+
+    var lang = localStorage.getItem("Language");
+    if (!lang) {
+      lang = "ro";
+    }
+    this.reservationConfirmationRestService.sendReservationConfirmationEmail(reservation,  lang).subscribe(() => {
       this.contactForm.reset();
       this.disabledSubmitButton = true;
+      this.openToast();
+      this.closeModal();
     }, error => {
       console.log('Error', error);
     });
@@ -72,11 +89,11 @@ export class PrivateEventsForm {
 
 
   openToast() {
-    setTimeout(() => this.notificationRef = this.notificationService.open(ConfirmationToastComponent, { 
+    setTimeout(() => this.notificationRef = this.notificationService.open(ConfirmationToastComponent, {
       position: 'top-center',
       data: {
-        toastTitle: "Request Recieved",
-        toastMessage: "Someone will contact you soon"
+        toastTitle: $localize`Request Recieved`,
+        toastMessage: $localize`Someone will contact you soon`
       }
     }), 1500);
   }

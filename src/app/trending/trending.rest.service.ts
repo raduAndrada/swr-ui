@@ -15,8 +15,8 @@ export class TrendingRestService extends RestService<TrendingBlock>{
     this.baseUrl =  environment.staticData.serverPort + environment.staticData.trendingApi;
   }
 
-  findAllInTrending(): Observable<TrendingBlock[]> {
-    const params = new HttpParams().append('inTrending', true);
+  findAllInTrending(lang: string ): Observable<TrendingBlock[]> {
+    const params = new HttpParams().append('inTrending', true).append("lang", lang);
     return this._http.get<TrendingBlock[]>(this.baseUrl, { params }).pipe(
       catchError(this.handleError<TrendingBlock[]>('findAllInTrening'))
     );

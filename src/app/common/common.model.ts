@@ -122,13 +122,24 @@ export const contact: ContactData = {
         address: 'Alexandru Vaida Voevod 14A', googleLink: 'https://maps.app.goo.gl/eUMd2DnhLqL3SHjM6'
     },
     phoneNumber: '0730165163',
-    openHours: [$localize `Mon-Fri: 08-16`, $localize `Sat: 10-16`, $localize `Sun: Closed`]
+    openHours: [$localize`Mon-Fri: 08-16`, $localize`Sat: 10-16`, $localize`Sun: Closed`]
 }
 
 export interface DishCategory {
     name: string;
     subcategory: string;
     icon?: string
+}
+
+export interface ReservationConfirmation {
+    name: string;
+    email: string;
+    partyType: string;
+    tel: string;
+    company: string;
+    requestDate: string;
+    noOfPeople: number;
+    additionalInfo: string;
 }
 
 export const menuCategories
