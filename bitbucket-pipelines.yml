@@ -5,10 +5,10 @@ pipelines:
         name: Deploy to ECR
         image: node:lts-alpine3.19
         script:
-          - npm cache clean --force
-          - npm install --force
-          - npm run build:prod
-          - docker build -t swr-ui:latest .
+         - npm cache clean --force
+         - npm install --force
+         - npm run build:prod
+         - docker build -t swr-ui:latest .
 
          - pipe: atlassian/aws-ecr-push-image:2.3.0
            variables:
