@@ -8,11 +8,11 @@ pipelines:
          - npm cache clean --force
          - npm install --force
          - npm run build:prod
-         - docker build -t swr-ui:latest .
+         - docker build -t swr-ui-docker-image:latest .
 
          - pipe: atlassian/aws-ecr-push-image:2.3.0
            variables:
-            IMAGE_NAME: swr-ui
+            IMAGE_NAME: swr-ui-docker-image
             TAGS: latest
 
 
