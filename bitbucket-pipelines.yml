@@ -2,7 +2,14 @@ pipelines:
   branches:
     master:
     - step:
+        image: node:lts-alpine3.19
+        script:
+          - npm cache clean --force
+          - npm install --force
+          - npm run build:prod
+    - step:
         name: Deploy to ECR
+        trigger: manual
         script:
          - docker build -t swr-ui:latest .
 
