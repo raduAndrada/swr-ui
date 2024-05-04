@@ -29,7 +29,7 @@ export class TrendingComponent {
 
   ngOnInit() {
     const v = localStorage.getItem("Language");
-    this.trendingService.findAllInTrending( v ? v : "en")
+    this.trendingService.findAllInTrending( v ? v : "ro")
         .subscribe(trending => {
           this.trendingBlocks = trending;
         });

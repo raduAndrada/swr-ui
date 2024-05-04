@@ -58,15 +58,22 @@
           <context context-type="linenumber">24,25</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4891699570527405204" datatype="html">
-        <source>Mon-Fri: 08-16</source>
+      <trans-unit id="8689332162225929229" datatype="html">
+        <source>Mon-Thu: 09-17</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/common.model.ts</context>
           <context context-type="linenumber">125</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5104722941194175124" datatype="html">
-        <source>Sat: 10-16</source>
+      <trans-unit id="8253813639988829327" datatype="html">
+        <source>Wed-Fri: 09-22</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/common/common.model.ts</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4185265807843750896" datatype="html">
+        <source>Sat: 10-22</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/common.model.ts</context>
           <context context-type="linenumber">125</context>
@@ -279,14 +286,14 @@
         <source>Request Recieved</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/modal/private-events-form/private-events-form.component.ts</context>
-          <context context-type="linenumber">89</context>
+          <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1142551762494580281" datatype="html">
         <source>Someone will contact you soon</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/modal/private-events-form/private-events-form.component.ts</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privateEventsTitle" datatype="html">
