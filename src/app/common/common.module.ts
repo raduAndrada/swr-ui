@@ -24,6 +24,7 @@ import {MdbDropdownModule} from 'mdb-angular-ui-kit/dropdown';
 import { ImagesRestService } from './images.rest.service';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ReservationForm } from './reservation-form/reservation-form';
 
 
 
@@ -32,7 +33,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
   declarations: [
     MenuComponent,
     FooterComponent,
-    ConfirmationToastComponent
+    ConfirmationToastComponent,
+    ReservationForm
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
         deps: [HttpClient]
       }
     })
-
   ],
   providers: [MdbModalService, ConnectionService, ImagesRestService],
   exports: [
@@ -85,7 +86,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     MdbSidenavModule,
     MdbCollapseModule,
     MdbPopoverModule,
-    TranslateModule
+    TranslateModule,
+    ReservationForm
   ]
 })
 export class CoreModule { }

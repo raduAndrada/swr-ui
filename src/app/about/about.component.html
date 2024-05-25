@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-lg-4 offset-lg-2 col-sm-12">
+  <div class="col-lg-4 offset-lg-1 col-sm-12">
     <h3 i18n="@@aboutGramHeader">Gram experience</h3>
     <hr class="my-1" />
     <p i18n="@@aboutIntroP1">We're a small family business and this restuarant is our dream.</p>
@@ -33,13 +33,13 @@
   </div>
   <!-- maybe extract a different component for this -->
   <!-- TODO -->
-  <div class="col-lg-6 col-sm-12">
-    <mdb-carousel *ngIf="aboutCarousel.length" class="carousel slide carousel-fade" [animation]="'fade'"
+  <div class="col-lg-6 offset-lg-1 col-sm-12">
+    <!-- <mdb-carousel *ngIf="aboutCarousel.length" class="carousel slide carousel-fade" [animation]="'fade'"
       [interval]="3000">
-      <mdb-carousel-item *ngFor="let about of aboutCarousel">
-        <img [src]="'data:image/jpeg;base64,' + about.image" class="img-fluid" />
-      </mdb-carousel-item>
-    </mdb-carousel>
+      <mdb-carousel-item *ngFor="let about of aboutCarousel"> -->
+        <img src="./assets/brunch.jpeg" class="img-fluid" />
+      <!-- </mdb-carousel-item> -->
+    <!-- </mdb-carousel> -->
   </div>
 
 </div>

@@ -5,14 +5,14 @@ import { MdbNotificationRef, MdbNotificationService } from 'mdb-angular-ui-kit/n
 import { ReservationConfirmation } from 'src/app/common/common.model';
 import { ReservationConfirmationRestService } from 'src/app/common/reservation-confirmation.rest.service';
 import { PrivateEventsModalComponent } from 'src/app/private-events/modal/private-events-modal.component';
-import { ConfirmationToastComponent } from '../../../common/toast/confirmation-toast/confirmation-toast.component';
-import { contactFormSelectEventSource, contactFormSelectEventType, datePicker, privateEventInput3rdForm, privateEventInputContactForm, timePickers } from './form.model';
+import { contactFormDate, contactFormDates, contactFormHour, privateEventInput3rdForm, privateEventInputContactForm, } from './form.model';
+import { ConfirmationToastComponent } from '../toast/confirmation-toast/confirmation-toast.component';
 
 @Component({
-  selector: 'private-events-form',
-  templateUrl: './private-events-form.component.html'
+  selector: 'reservation-form',
+  templateUrl: './reservation-form.html'
 })
-export class PrivateEventsForm {
+export class ReservationForm {
 
   contactForm: FormGroup;
   disabledSubmitButton: boolean = true;
@@ -20,9 +20,10 @@ export class PrivateEventsForm {
 
 
   privateEventInputContactForm = privateEventInputContactForm;
-  contactFormSelectEventType = contactFormSelectEventType;
+  contactFormDate = contactFormDate;
   privateEventInput3rdForm = privateEventInput3rdForm;
-  contactFormSelectEventSource = contactFormSelectEventSource;
+  contactFormDates = contactFormDates;
+  contactFormHour = contactFormHour;
 
 
   @HostListener('input') oninput() {
@@ -30,9 +31,6 @@ export class PrivateEventsForm {
       this.disabledSubmitButton = false;
     }
   }
-
-  @Output()
-  closeModalEventEmitter = new EventEmitter<boolean>();
 
 
   constructor(private fb: FormBuilder,
@@ -45,15 +43,9 @@ export class PrivateEventsForm {
       'contactFormName': ['', Validators.required],
       'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
       'contactFormTel': ['', Validators.required],
-      'contactFormCompany': [''],
-      'contactFormPartyType': ['', Validators.required],
-      'contactRequestDate': ['', Validators.required],
-      'contactNumberOfPeople': ['', Validators.compose([Validators.required, Validators.min(1)])],
-      'contactAdditionalInfo': [''],
-      // 'contactPrivateEventSource': [''],
-      // 'startTimeControl': ['06:00 PM', Validators.required],
-      // 'endTimeControl': ['11:00 PM', Validators.required],
-      // 'datepickerControl': ['', Validators.required],
+      'contactFormDate': ['', Validators.required],
+      'contactHour': ['', Validators.required],
+      'contactNumberOfPeople': ['', Validators.compose([Validators.required, Validators.min(1)])]
     });
   }
 
@@ -62,10 +54,9 @@ export class PrivateEventsForm {
       name: this.contactForm.get("contactFormName")?.value,
       email: this.contactForm.get("contactFormEmail")?.value,
       tel: this.contactForm.get("contactFormTel")?.value,
-      company: this.contactForm.get("contactFormCompany")?.value,
-      requestDate: this.contactForm.get("contactRequestDate")?.value,
+      requestDate: this.contactForm.get("contactFormDate")?.value,
       noOfPeople: this.contactForm.get("contactNumberOfPeople")?.value,
-      additionalInfo: this.contactForm.get("contactAdditionalInfo")?.value
+      additionalInfo: this.contactForm.get("contactHour")?.value
     });
 
     var lang = localStorage.getItem("Language");
@@ -73,10 +64,11 @@ export class PrivateEventsForm {
       lang = "ro";
     }
     this.reservationConfirmationRestService.sendReservationConfirmationEmail(reservation,  lang).subscribe(() => {
+      this.modalRef.close()
       this.contactForm.reset();
       this.disabledSubmitButton = true;
       this.openToast();
-      this.closeModal();
+   
     }, error => {
       console.log('Error', error);
     });
@@ -93,7 +85,5 @@ export class PrivateEventsForm {
     }), 1500);
   }
 
-  closeModal() {
-    this.closeModalEventEmitter.emit(true);
-  }
+ 
 }

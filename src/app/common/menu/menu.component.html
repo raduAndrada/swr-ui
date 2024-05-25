@@ -17,7 +17,7 @@
     <mdb-sidenav #sidenav="mdbSidenav">
         <a class="ripple d-flex justify-content-center py-2 mb-1" style="border-bottom: 2px solid #f5f5f5" href="#!"
             data-mdb-ripple-color="primary">
-            <img id="Gram Logo" src="./assets/logo.png" alt="Gram Logo" draggable="false" />
+            <img id="Gram Logo" src="./assets/logo.PNG" alt="Gram Logo" draggable="false" />
         </a>
         <div mdbDropdown class="btn-group justify-content-center">
             <button type="button" class="btn btn-primary" data-mdb-tooltip-init title="{{ selectLanguage}}">{{
@@ -91,6 +91,13 @@
             <hr class="my-3" />
         </div>
         <div class="container-fluid px-2 py-2 justify-content-center">
+            <div class="card">
+             <img id="theme" src="./assets/eos-banner.png" class="img-fluid" />
+             <div class="text-center pt-2 pb-2" >
+                <a (click)="openModal()" class="btn btn-outline-primary btn-lg" i18n="@@privateEventsBookButton" >Book Us</a>
+             </div>
+            </div>
+            <hr/>
             <router-outlet></router-outlet>
         </div>
         <div class="fixed-action-btn" id="fixed1">

@@ -23,11 +23,11 @@ export class AboutComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     //refactor this into a separate component
     const origin = 'about::carousel';
-    this.subscriptions.push(
-      this.imagesRest.findAllByOrigin(origin)
-        .subscribe(dishesMenuCarousel => {
-          this.aboutCarousel = dishesMenuCarousel;
-        }));
+    // this.subscriptions.push(
+    //   this.imagesRest.findAllByOrigin(origin)
+    //     .subscribe(dishesMenuCarousel => {
+    //       this.aboutCarousel = dishesMenuCarousel;
+    //     }));
   }
 
   ngOnDestroy(): void {

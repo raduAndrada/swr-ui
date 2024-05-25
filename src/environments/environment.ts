@@ -11,7 +11,7 @@ export const environment = {
     dishesApi: "dishes",
   },
   commonicationChannel: {
-    serverPort: "http://localhost:8902/api/",
+    serverPort: "http://ec2-18-153-93-71.eu-central-1.compute.amazonaws.com:8902/api/",
     emailApi: "communication-channel/email/reservations"
   }
 };

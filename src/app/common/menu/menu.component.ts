@@ -2,8 +2,10 @@ import { Component, HostListener, isDevMode, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { MdbSidenavComponent } from 'mdb-angular-ui-kit/sidenav';
-import { contact, social_links } from '../common.model';
+import { contact, ReservationConfirmation, social_links } from '../common.model';
 import { menuItems } from './menu.model';
+import { ReservationForm } from '../reservation-form/reservation-form';
+import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 
 @Component({
   selector: 'app-menu',
@@ -33,10 +35,13 @@ export class MenuComponent {
   socialLinks = social_links;
   contact = contact;
 
+  modalRef!: MdbModalRef<ReservationForm>;
+
   selectLanguage = $localize `selectLanguage`
 
   constructor (public readonly translateService: TranslateService,
-    public readonly router: Router) {
+    public readonly router: Router,
+    private modalService: MdbModalService) {
     this.curentLanguage = localStorage.getItem('Language');
     if (!this.curentLanguage) {
       this.curentLanguage = "ro";
@@ -84,5 +89,16 @@ export class MenuComponent {
   scrollToTop(): void {
     window.scrollTo(0, 0);
   };
+
+  openModal() {
+    const config = {
+      animation: true,
+      backdrop: true,
+      ignoreBackdropClick: false,
+      keyboard: true,
+      modalClass: 'modal-large',
+    }
+    this.modalRef = this.modalService.open(ReservationForm, config);
+  }
 
 }
