@@ -44,7 +44,7 @@ export class ReservationForm {
       'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
       'contactFormTel': ['', Validators.required],
       'contactFormDate': ['', Validators.required],
-      'contactHour': ['', Validators.required],
+      'contactFormHour': ['', Validators.required],
       'contactNumberOfPeople': ['', Validators.compose([Validators.required, Validators.min(1)])]
     });
   }
@@ -56,8 +56,9 @@ export class ReservationForm {
       tel: this.contactForm.get("contactFormTel")?.value,
       requestDate: this.contactForm.get("contactFormDate")?.value,
       noOfPeople: this.contactForm.get("contactNumberOfPeople")?.value,
-      additionalInfo: this.contactForm.get("contactHour")?.value
+      additionalInfo: this.contactForm.get("contactFormHour")?.value
     });
+    console.log(reservation)
 
     var lang = localStorage.getItem("Language");
     if (!lang) {

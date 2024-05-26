@@ -91,12 +91,13 @@
             <hr class="my-3" />
         </div>
         <div class="container-fluid px-2 py-2 justify-content-center">
-            <div class="card">
-             <img id="theme" src="./assets/eos-banner.png" class="img-fluid" />
-             <div class="text-center pt-2 pb-2" >
-                <a (click)="openModal()" class="btn btn-outline-primary btn-lg" i18n="@@privateEventsBookButton" >Book Us</a>
-             </div>
+            <div class="bg-image d-flex align-items-center justify-content-center"
+             id="theme" style="background-image: url(./assets/eos-banner.png); height:780px">
+             <div class="d-grid gap-3 col-3 mx-auto">
+                <button class="btn btn-lg text-white bg-dark bg-gradient" type="button" mdbRipple (click)="openModal()" i18n="@@privateEventsBookButton">Book Us</button>
             </div>
+                    
+             </div>
             <hr/>
             <router-outlet></router-outlet>
         </div>

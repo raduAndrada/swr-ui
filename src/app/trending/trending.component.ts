@@ -20,7 +20,7 @@ export class TrendingComponent {
     backdrop: true,
     ignoreBackdropClick: false,
     keyboard: true,
-    modalClass: 'modal-large',
+    modalClass: 'modal-lg',
   }
 
   constructor(private modalService: MdbModalService,

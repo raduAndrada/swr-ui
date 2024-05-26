@@ -44,7 +44,7 @@ export const contactFormHours: SelectDetails[] = [
 ]
 
 export const contactFormHour: SelectInput = {
-    controlName: "contactFormDate", options: contactFormHours, label: $localize `Date`
+    controlName: "contactFormHour", options: contactFormHours, label: $localize `Date`
 }
 
 export const privateEventInput3rdForm: InputDetails[] = [

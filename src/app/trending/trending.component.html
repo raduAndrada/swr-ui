@@ -3,13 +3,14 @@
 <section class="my-5">
 
     <!-- Section heading -->
-    <h2 class="h1-responsive font-weight-bold text-center my-5" i18n="@@trendingTitle" >Recent Updates</h2>
+    <h1 class="h1-responsive font-weight-bold text-center my-5" i18n="@@trendingTitle" >Recent Updates</h1>
     <hr class="my-5">
     <!-- Grid row -->
     <div class="row" *ngFor="let trend of trendingBlocks">
       <div class="col-lg-5 offset-lg-2 col-sm-12">
         <!-- Post title -->
-        <h3 class="font-weight-bold mb-3 text-muted fs-1 text-decoration-underline"><strong>{{trend.title}}</strong></h3>
+        <h5 class="font-weight-bold mb-3 text-muted fs-1 text-decoration-underline"><strong>
+        <a (click)="openModal(trend)">{{trend.title}} </a></strong></h5>
         <!-- Excerpt -->
         <p class="dark-grey-text">{{trend.shortDescription}}</p>
         <!-- Post data -->
@@ -23,7 +24,7 @@
         <!-- Featured image -->
         <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4 waves-light" mdbWavesEffect>
           <img class="img-fluid" [src]="'data:image/jpeg;base64,' + trend.images[0].image" alt="Sample image">
-          <a>
+          <a (click)="openModal(trend)">
             <div class="mask rgba-white-slight"></div>
           </a>
         </div>

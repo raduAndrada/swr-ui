@@ -1,6 +1,6 @@
-<div class="row col-12">
-    <div class="card">
-        <div class="card-body">
+<div class="row col-12 justify-content-center">
+    <div class="card col offset-1">
+        <div class="card-body ">
             <h5 class="card-title">{{trendingBlock.title}}</h5>
             <p class="card-text">
                 {{trendingBlock.shortDescription}}
@@ -9,7 +9,12 @@
                 <small class="text-muted">Last updated 3 mins ago</small>
             </p> -->
         </div>
-        <img [src]="'data:image/jpeg;base64,' + trendingBlock.images[0].image" class="card-img-bottom img-fluid" alt="Camera" />
+        <mdb-carousel *ngIf="trendingBlock.images.length" [animation]="'fade'" [controls]="true" [indicators]="true" >
+            <mdb-carousel-item *ngFor="let image of trendingBlock.images">
+              <img [src]="'data:image/jpeg;base64,' + image.image" class="img-fluid" />
+            </mdb-carousel-item>
+          </mdb-carousel>
+        <!-- <img [src]="'data:image/jpeg;base64,' + trendingBlock.images[0].image" class="card-img-bottom img-fluid" alt="Camera" /> -->
     </div>
 </div>
 <br/>
@@ -17,15 +22,4 @@
     <p >
         {{trendingBlock.description}}
     </p>
-</div>
-<br/>
-<div class="row col-12">
-    <div class="col-6">
-        <img [src]="'data:image/jpeg;base64,' + trendingBlock.images[1].image" class="img-fluid rounded"
-            alt="Townhouses and Skyscrapers" />
-    </div>
-    <div class="col-6">
-        <img [src]="'data:image/jpeg;base64,' + trendingBlock.images[2].image" class="img-fluid rounded"
-            alt="Townhouses and Skyscrapers" />
-    </div>
 </div>

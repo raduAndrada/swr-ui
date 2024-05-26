@@ -4,6 +4,7 @@ import { TrendingModalContentComponent } from './trending-modal/trending-modal-c
 import { TrendingModalComponent } from './trending-modal/trending-modal.component';
 import { TrendingComponent } from './trending.component';
 import { TrendingRestService } from './trending.rest.service';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 
 
 
@@ -14,7 +15,8 @@ import { TrendingRestService } from './trending.rest.service';
     TrendingModalContentComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MdbCarouselModule
   ],
   providers: [
     TrendingRestService
