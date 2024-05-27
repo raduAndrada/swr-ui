@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { Dish, DishCategory, DishMenu, ImageBlock } from 'src/app/common/common.model';
-import { DishesRestService } from '../dishes.rest.service';
+import { Category, ImageBlock } from 'src/app/common/common.model';
+import { MenuItemsService } from '../dishes.rest.service';
 
 import {
   pulseAnimation
@@ -20,28 +20,25 @@ export class DishesMenuComponent implements AfterViewInit, OnInit {
 
   @ViewChild('tabs') tabs!: MdbTabsComponent;
 
-  dishesMenu: DishMenu = Object.assign({});
-  menuCategories: DishCategory[] = [];
+  menuCategories: Category[] = [];
 
   dishesMenuCarousel: ImageBlock[] = [];
 
-  sandwiches: Dish[] = [];
-  togo: Dish[] = [];
-  brunch: Dish[] = [];
-  drinks: Dish[] = [];
-
   constructor(
-    private trendingService: DishesRestService,
+    private menuItemsRest: MenuItemsService,
     private imagesRest: ImagesRestService
   ) {
 
   }
 
   ngOnInit() {
-    // this.trendingService.getCategories()
-    //   .subscribe(categories => {
-    //     this.menuCategories = categories;
-    //   });
+    this.menuItemsRest.getCategories()
+      .subscribe(categories => {
+        this.menuCategories = categories;
+        setTimeout(() => {
+          this.tabs.setActiveTab(0);
+        }, 0);
+      });
 
     // this.trendingService.getMenu()
     //   .subscribe(menu => {
@@ -49,31 +46,15 @@ export class DishesMenuComponent implements AfterViewInit, OnInit {
     //   });
     const origin = 'dishes-menu::carousel';
 
-    this.imagesRest.findAllByOrigin(origin)
-      .subscribe(dishesMenuCarousel => {
-        this.dishesMenuCarousel = dishesMenuCarousel;
-      });
+    // this.imagesRest.findAllByOrigin(origin)
+    //   .subscribe(dishesMenuCarousel => {
+    //     this.dishesMenuCarousel = dishesMenuCarousel;
+    //   });
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.tabs.setActiveTab(0);
-    // }, 0);
+  
   }
 
-
-
-
-
-
-  animationState = false;
-
-  startAnimation(): void {
-    this.animationState = true;
-  }
-
-  onAnimationDone(): void {
-    this.animationState = false;
-  }
 
 }

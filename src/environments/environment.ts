@@ -7,8 +7,8 @@ export const environment = {
     imagesApi: "image-blocks"
   },
   dishes: {
-    serverPort: "http://ec2-18-153-93-71.eu-central-1.compute.amazonaws.com:8901/api/",
-    dishesApi: "dishes",
+    serverPort: "http://localhost:8901/api/",
+    dishesApi: "menu",
   },
   commonicationChannel: {
     serverPort: "http://ec2-18-153-93-71.eu-central-1.compute.amazonaws.com:8902/api/",

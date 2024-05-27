@@ -1,62 +1,18 @@
-export enum Label {
-    FISH,
-    DAIRY,
-    SUGAR_FREE,
-    GLUTEN_FREE,
-    VEGAN,
-    VEGETARIAN,
-    EGGS
-}
-
-
-export interface NutritionalValue {
-    kcal: number;
-    kj: number;
-    values: Map<string, number>
-    ingredients: Map<Ingredient, number>;
-}
-
-
-export interface Ingredient {
-    shortName: string;
-    longName: string;
-    description: string;
-    quantity: number;
-    um: string;
-    recipeName: string;
-}
-
-export interface Dish {
-    name: string;
-    ingredients: Ingredient[];
-    price: number;
-    nutritionalValue: NutritionalValue;
-    labels: Label[];
-    category: DishCategory;
-    description: string;
-    quantity: string;
-}
-
-export interface DishMenu {
-    subcategoryMenu: DishWrapper[]
+export interface Category {
+    name : string;
+    subcategories : Subcategory[] ; 
 }
 
 export interface Subcategory {
-    category: DishCategory;
-    icon: string;
-    name: string;
+    name : string;
+    menuItems : MenuItem[] ; 
 }
 
-export interface DishWrapper {
-    subcategory: Subcategory;
-    dishes: Dish[];
-}
-
-
-export interface Recipe {
-    name: string;
-    nutritionalValue: NutritionalValue;
-    ingredients: Ingredient[];
+export interface MenuItem {
+    name : string;
+    description : string; 
+    price : string;
+    quantity : string;
 }
 
 export interface ImageBlock {
