@@ -12,7 +12,7 @@ export class MenuItemsService extends RestService<Category>{
 
   constructor(private readonly _http: HttpClient) {
     super(_http);
-    this.baseUrl =  environment.dishes.serverPort + environment.dishes.dishesApi;
+    this.baseUrl =  environment.menu.serverPort + environment.menu.menuApi;
   }
 
   getCategories(): Observable<Category[]> {

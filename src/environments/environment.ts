@@ -6,9 +6,9 @@ export const environment = {
     teamApi: "team-blocks",
     imagesApi: "image-blocks"
   },
-  dishes: {
+  menu: {
     serverPort: "http://ec2-18-192-42-11.eu-central-1.compute.amazonaws.com:8901/api/",
-    dishesApi: "menu",
+    menuApi: "menu",
   },
   commonicationChannel: {
     serverPort: "http://ec2-18-192-42-11.eu-central-1.compute.amazonaws.com:8902/api/",
