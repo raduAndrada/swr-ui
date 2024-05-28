@@ -12,7 +12,7 @@ export class ReservationConfirmationRestService extends RestService<ReservationC
 
   constructor(private readonly _http: HttpClient) {
     super(_http);
-    this.baseUrl = environment.commonicationChannel.serverPort + environment.commonicationChannel.emailApi;
+    this.baseUrl = environment.communicationChannel.serverPort + environment.communicationChannel.emailApi;
   }
 
 
