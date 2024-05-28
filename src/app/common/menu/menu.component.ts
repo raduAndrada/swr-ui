@@ -101,4 +101,8 @@ export class MenuComponent {
     this.modalRef = this.modalService.open(ReservationForm, config);
   }
 
+  currentPageNotMenu(){
+    return !this.router.url.includes(menuItems[0].link);
+  }
+
 }

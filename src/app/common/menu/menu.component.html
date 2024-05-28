@@ -91,20 +91,23 @@
             <hr class="my-3" />
         </div>
         <div class="container-fluid px-2 py-2 justify-content-center">
-            <div >
-             <img id="theme" src="./assets/eos-banner.png" class="img-fluid">
-    
-      
-             <div class="text-center pt-2 pb-2" >
-                <a (click)="openModal()" class="btn btn-outline-primary btn-md" i18n="@@privateEventsBookButton" >Book Us</a>
-             
-             </div>
+            <div>
+                <img id="theme" src="./assets/eos-banner.png" class="img-fluid">
+
+
+                <div class="d-grid gap-2 col-8 mx-auto pt-2">
+                    <a (click)="openModal()" class="btn btn-outline-dark"
+                        i18n="@@privateEventsBookButton">Book Us</a>
+                </div>
+                <div class="d-grid gap-2 col-8 mx-auto pt-2" *ngIf="currentPageNotMenu()">
+                        <button class="btn btn-outline-dark" type="button" data-mdb-ripple-init i18n="@@ourMenu" routerLink="{{menuItems[0].link}}">Meniul Nostru</button>
+                    </div>
             </div>
             <hr class="my-3" />
             <router-outlet></router-outlet>
         </div>
         <div class="fixed-action-btn" id="fixed1">
-            <a class="btn btn-danger btn-floating" data-mdb-ripple-color="dark" #btnBackToTop (click)="scrollToTop()"
+            <a class="btn btn-secondary btn-floating" data-mdb-ripple-color="dark" #btnBackToTop (click)="scrollToTop()"
                 [ngStyle]="{'display': display}" id="btnBackToTop">
                 <i class="fas fa-arrow-up fa-lg"></i>
             </a>

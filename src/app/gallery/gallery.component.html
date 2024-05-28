@@ -1,4 +1,10 @@
 <mdb-lightbox class="lightbox">
+  <div class="d-flex justify-content-center" *ngIf="!gallery.length">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
   <div class="row" *ngIf="gallery.length">
     <div class="col-4 text-center" *ngFor="let image of gallery">
       <img mdbLightboxItem [src]="'data:image/jpeg;base64,' + image.image" class="img-fluid shadow-1-strong rounded" />
@@ -8,3 +14,4 @@
   </div>
 
 </mdb-lightbox>
+<hr/>

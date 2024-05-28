@@ -1,38 +1,46 @@
-
 <!-- Section: Blog v.3 -->
 <section class="my-5">
 
-    <!-- Section heading -->
-    <h1 class="h1-responsive font-weight-bold text-center my-5" i18n="@@trendingTitle" >Recent Updates</h1>
-    <hr class="my-5">
-    <!-- Grid row -->
-    <div class="row" *ngFor="let trend of trendingBlocks">
-      <div class="col-lg-5 offset-lg-2 col-sm-12">
-        <!-- Post title -->
-        <h5 class="font-weight-bold mb-3 text-muted fs-5 text-decoration-underline">
-        <a (click)="openModal(trend)">{{trend.title}} </a></h5>
-        <!-- Excerpt -->
-        <p class="dark-grey-text">{{trend.shortDescription}}</p>
-        <!-- Post data -->
-        <p>by <a class="font-weight-bold">{{trend.author}}</a>, {{trend.date}}</p>
-        <!-- Read more button -->
-        <a mdbBtn color="primary" mdbWavesEffect (click)="openModal(trend)" i18n="@@trendingReadMore" >Read more</a>
-  
-      </div>
-      <div class="col-lg-4 col-sm-12">
-  
-        <!-- Featured image -->
-        <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4 waves-light" mdbWavesEffect>
-          <img class="img-fluid" [src]="'data:image/jpeg;base64,' + trend.images[0].image" alt="Sample image">
-          <a (click)="openModal(trend)">
-            <div class="mask rgba-white-slight"></div>
-          </a>
-        </div>
-  
-      </div>
-      <hr class="my-5">
-  
+  <!-- Section heading -->
+  <p class="h1-responsive font-weight-bold text-center my-5 display-3 text-black text-opacity-75" i18n="@@trendingTitle">Recent Updates</p>
+  <hr class="my-5">
+
+  <div class="d-flex justify-content-center" *ngIf="!trendingBlocks">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
- 
-  </section>
-  <!-- Section: Blog v.3 -->
+  </div>
+  <!-- Grid row -->
+  <div class="row" *ngFor="let trend of trendingBlocks">
+    <div class="col-lg-5 offset-lg-2 col-sm-12">
+      
+      <figure >
+        <blockquote class="blockquote">
+        <p class="font-weight-bold mb-3 text-muted fs-3 lead">
+          <a (click)="openModal(trend)"><em>{{trend.title}} </em></a>
+        </p>
+        
+          <a class="dark-grey-text" mdbBtn mdbWavesEffect (click)="openModal(trend)">{{trend.shortDescription}}</a>
+        </blockquote>
+        <!-- Post data -->
+        <figcaption class="blockquote-footer text-center">{{trend.author}}, {{trend.date}}</figcaption>
+        <!-- Read more button -->
+      </figure>
+    </div>
+    <div class="col-lg-4 col-sm-12">
+
+      <!-- Featured image -->
+      <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4 waves-light" mdbWavesEffect>
+        <img class="img-fluid" [src]="'data:image/jpeg;base64,' + trend.images[0].image" alt="Sample image">
+        <a (click)="openModal(trend)">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+    </div>
+    <hr class="my-5">
+
+  </div>
+
+</section>
+<!-- Section: Blog v.3 -->
