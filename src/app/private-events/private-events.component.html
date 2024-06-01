@@ -1,38 +1,48 @@
-<div class="row">
-    <div class="col-lg-6 offset-lg-2 col-sm-12 offset-sm-2">
-        <div class="card-body">
-            <h5 class="card-title py-2" i18n="@@privateEventsTitle">Book your Gram expedience now</h5>
-            <button class="btn btn-outline-dark py-2" (click)="openModal()" mdbRipple rippleColor="light"
-                data-mdb-color="dark" i18n="@@privateEventsBookButton">Book Us</button>
-        </div>
-        <hr />
-        <ul class="list-group list-group-light mb-3">
-            <li class="list-group-item">
-                <h5 class="fw-bold" i18n="@@privateEventsPartyTitle">Private party hosting</h5>
-                <p class="text-muted mb-0" i18n="@@privateEventsPartyP1">
-                    We organize private parties for you and your crew. You come up with a reason to celebrate and
-                    take care of the rest.
-                    You can book the entire place for yourself (~25 seats) or you can reserve a table.
-                </p>
-            </li>
-            <li class="list-group-item">
-                <h5 class="fw-bold" i18n="@@privateEventsCateringTitle">Catering</h5>
-                <p class="text-muted mb-0" i18n="@@privateEventsCateringP1">
-                    Maybe you have the place but you don't have the food. No worries, we can fix that for you.
-                    We can prepare your food and deliver it to you.
-                </p>
-            </li>
-        </ul>
-    </div>
-    <div class="col-lg-4 col-sm-12 py-4">
-        <mdb-carousel *ngIf="eventsCarousel.length" [animation]="'fade'">
-            <mdb-carousel-item *ngFor="let event of eventsCarousel">
-                <img [src]="'data:image/jpeg;base64,' + event.image" class="img-fluid" />
-            </mdb-carousel-item>
-        </mdb-carousel>
+<div class="container-fluid">
+    <ul class="list-group list-group-light mb-3">
+        <li class="list-group-item">
+            <div class="row ">
+                <div class="col-lg-6 col-sm-12 align-self-center">
+                    <h2 class="fw-bold" i18n="@@privateEventsPartyTitle">Private party hosting</h2>
+                    <p class="text-muted mb-0 lead" i18n="@@privateEventsPartyP1">
+                        We organize private parties for you and your crew. You come up with a reason to celebrate
+                        and
+                        take care of the rest.
+                        You can book the entire place for yourself (~25 seats) or you can reserve a table.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <img class="img-fluid" src="./assets/private-party.jpeg"/>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+       
+    
+            <div class="row ">
+                <div class="col-lg-6 col-sm-12">
+                    <img class="img-fluid" src="./assets/catering.jpeg"/>
+                </div>
+                <div class="col-lg-6 col-sm-12 align-self-center">
+                    <h2 class="fw-bold" i18n="@@privateEventsCateringTitle">Catering</h2>
+                    <p class="text-muted mb-0 lead" i18n="@@privateEventsCateringP1">
+                        Maybe you have the place but you don't have the food. No worries, we can fix that for you.
+                        We can prepare your food and deliver it to you.
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <hr />
+
+
+    <div class="card-body text-center col-10 offset-1">
+        <h5 class="card-title py-2" i18n="@@privateEventsTitle">Book your Gram expedience now</h5>
+        <button class="btn btn-outline-dark py-2" (click)="openModal()" mdbRipple rippleColor="light"
+            data-mdb-color="dark" i18n="@@privateEventsBookButton">Book Us</button>
+
     </div>
 </div>
-
 <!-- <div class="row">
         <div class="col-md-4 card" *ngFor="let card of cardData">
             <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
@@ -53,5 +63,3 @@
         <a class="btn btn-outline-dark btn-rounded w-100" color="blue-grey" role="button" (click)="openModal()">Book
             now</a>
     </div> -->
-<br />
-

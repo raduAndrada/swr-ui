@@ -12,7 +12,6 @@ import { PrivateEventsModalComponent } from './modal/private-events-modal.compon
 export class PrivateEventsComponent {
 
   modalRef!: MdbModalRef<PrivateEventsModalComponent>;
-  eventsCarousel: ImageBlock[] = [];
 
   config = {
     animation: true,
@@ -23,14 +22,11 @@ export class PrivateEventsComponent {
   }
 
   constructor(private modalService: MdbModalService,
-    private imageRestService: ImagesRestService
   ) { }
 
   ngOnInit() {
     const origin = `events::carousel`;
-    this.imageRestService.findAllByOrigin(origin).subscribe(
-      events => this.eventsCarousel = events
-    )
+ 
   }
 
   openModal() {

@@ -9,16 +9,16 @@ import { ImagesRestService } from '../common/images.rest.service';
 })
 export class GalleryComponent implements OnInit {
 
-  gallery: ImageBlock[] = [];
-  constructor(private imagesRest: ImagesRestService) {}
+  loading = true;
+
 
   ngOnInit(): void {
-    const origin = 'gallery::lightbox';
 
-    this.imagesRest.findAllByOrigin(origin)
-      .subscribe(gallery => {
-        this.gallery = gallery;
-      });
+    if (this.loading) {
+      setTimeout(() => {
+      this.loading = false;
+    }, 1500);
+    }
   }
   
 }

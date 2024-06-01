@@ -26,9 +26,9 @@ export const privateEventInputContactForm: InputDetails[] = [
 ]
 
 export const contactFormDates: SelectDetails[] = [
-    { value: "30.05.2024", text: $localize  `Joi - 30 Mai` },
-    { value: "31.05.2024", text: $localize `Vineri - 31 Mai` },
-    { value: "01.06.2024", text: $localize `Sambata - 1 Iunie` },
+    { value: "06.06.2024", text: $localize  `Joi - 30 Mai` },
+    // { value: "31.05.2024", text: $localize `Vineri - 31 Mai` },
+    // { value: "01.06.2024", text: $localize `Sambata - 1 Iunie` },
 ]
 
 export const contactFormDate: SelectInput = {

@@ -12,8 +12,8 @@
   <!-- Subject -->
   <label>{{contactFormDate.label}}</label>
   <select formControlName="{{contactFormDate.controlName}}" class="browser-default custom-select mb-4">
-    <option value="" disabled i18n>Choose option</option>
-    <option *ngFor="let option of contactFormDate.options" value="{{option.value}}" >{{option.text}}</option>
+    <!-- <option value="{{contactFormDate.options[0].value}}"  i18n>Choose option</option> -->
+    <option *ngFor="let option of contactFormDate.options" value="{{option.value}}"  >{{option.text}}</option>
   </select>
   <select formControlName="{{contactFormHour.controlName}}" class="browser-default custom-select mb-4">
     <option value="" disabled i18n>Choose option</option>

@@ -71,7 +71,7 @@ export const social_links: SocialLink[] = [
     { link: "https://www.instagram.com/bistro__gram/", name: "fab fa-instagram", color: "#ac2bac" },
     { link: "https://www.facebook.com/BistroGramCluj", name: "fab fa-facebook", color: "#3b5998" },
     // { link: "", name: "fab fa-twitter", color: "#55acee" },
-    // { link: "", name: "fab fa-tiktok", color: "#1f2122" }
+    { link: "https://www.tiktok.com/@gram.bistrobrunch?_t=8mpxmhXwhnt&_r=1", name: "fab fa-tiktok", color: "#1f2122" }
 ];
 export const contact: ContactData = {
     location: {
