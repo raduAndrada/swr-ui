@@ -12,7 +12,7 @@
 </mdb-navbar> -->
 
 <!-- TODO cleanup-->
-
+<div class="container-fluid">
 <mdb-sidenav-layout>
     <mdb-sidenav #sidenav="mdbSidenav">
         <a class="ripple d-flex justify-content-center py-2 mb-1" style="border-bottom: 2px solid #f5f5f5" href="#!"
@@ -91,7 +91,7 @@
             <hr class="my-3" />
         </div>
         <div class="container-fluid px-2 py-2 justify-content-center">
-            <div>
+            <div class="border">
                 <img id="theme" src="./assets/tte-banner.png" class="img-fluid">
 
 
@@ -99,7 +99,7 @@
                     <a (click)="openModal()" class="btn btn-outline-dark"
                         i18n="@@privateEventsBookButton">Book Us</a>
                 </div>
-                <div class="d-grid gap-2 col-8 mx-auto pt-2" *ngIf="currentPageNotMenu()">
+                <div class="d-grid gap-2 col-8 mx-auto pt-2 pb-3" *ngIf="currentPageNotMenu()">
                         <button class="btn btn-outline-dark" type="button" data-mdb-ripple-init i18n="@@ourMenu" routerLink="{{menuItems[0].link}}">Meniul Nostru</button>
                     </div>
             </div>
@@ -115,3 +115,5 @@
         <app-footer></app-footer>
     </mdb-sidenav-content>
 </mdb-sidenav-layout>
+
+</div>
