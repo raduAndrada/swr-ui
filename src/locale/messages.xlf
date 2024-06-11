@@ -58,32 +58,25 @@
           <context context-type="linenumber">24,25</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8689332162225929229" datatype="html">
-        <source>Mon-Thu: 09-17</source>
+      <trans-unit id="5299023192183439138" datatype="html">
+        <source>Mon-Fri: 09-22</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/common.model.ts</context>
-          <context context-type="linenumber">125</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8253813639988829327" datatype="html">
-        <source>Wed-Fri: 09-22</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/common/common.model.ts</context>
-          <context context-type="linenumber">125</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4185265807843750896" datatype="html">
         <source>Sat: 10-22</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/common.model.ts</context>
-          <context context-type="linenumber">125</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8561557644813106691" datatype="html">
         <source>Sun: Closed</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/common.model.ts</context>
-          <context context-type="linenumber">125</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7922989125096435449" datatype="html">
@@ -114,22 +107,18 @@
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="privateEventsBookButton" datatype="html">
-        <source>Book Us</source>
+      <trans-unit id="ourMenu" datatype="html">
+        <source>Meniul Nostru</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/menu/menu.component.html</context>
-          <context context-type="linenumber">97</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3354881287424811394" datatype="html">
         <source>selectLanguage</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/menu/menu.component.ts</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7063222837089152179" datatype="html">
@@ -215,28 +204,14 @@
         </context-group>
       </trans-unit>
       <trans-unit id="6548412016179773819" datatype="html">
-        <source>Thursday - 30 May</source>
+        <source>Joi - 30 Mai</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/reservation-form/form.model.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1468693295878550638" datatype="html">
-        <source>Friday - 31 May</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/common/reservation-form/form.model.ts</context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4378831328885741866" datatype="html">
-        <source>Saturday - 1 June</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/common/reservation-form/form.model.ts</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="3973931101896534797" datatype="html">
-        <source>Select the date</source>
+        <source>Date</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/reservation-form/form.model.ts</context>
           <context context-type="linenumber">35</context>
@@ -247,28 +222,28 @@
         </context-group>
       </trans-unit>
       <trans-unit id="507836111184273063" datatype="html">
-        <source>18:00</source>
+        <source>Ora 18:00</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/reservation-form/form.model.ts</context>
           <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8799286280272507495" datatype="html">
-        <source>19:00</source>
+        <source>Ora 19:00</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/reservation-form/form.model.ts</context>
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8847306175847710710" datatype="html">
-        <source>20:00</source>
+        <source>Ora 20:00</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/reservation-form/form.model.ts</context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8325248548075842481" datatype="html">
-        <source>21:00</source>
+        <source>Ora 21:00</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/reservation-form/form.model.ts</context>
           <context context-type="linenumber">42</context>
@@ -300,10 +275,6 @@
         <source>Choose option</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/reservation-form/reservation-form.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/common/reservation-form/reservation-form.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
         <context-group purpose="location">
@@ -326,7 +297,7 @@
         <source>Request Recieved</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/reservation-form/reservation-form.ts</context>
-          <context context-type="linenumber">82</context>
+          <context context-type="linenumber">83</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/modal/private-events-form/private-events-form.component.ts</context>
@@ -337,18 +308,11 @@
         <source>Someone will contact you soon</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/common/reservation-form/reservation-form.ts</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="linenumber">84</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/modal/private-events-form/private-events-form.component.ts</context>
           <context context-type="linenumber">91</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="menuLink" datatype="html">
-        <source> Consult our menu here.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/dishes/dishes-menu/dishes-menu.component.html</context>
-          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4954088360352789284" datatype="html">
@@ -407,53 +371,53 @@
           <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="privateEventsTitle" datatype="html">
-        <source>Book your Gram expedience now</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="privateEventsPartyTitle" datatype="html">
         <source>Private party hosting</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privateEventsPartyP1" datatype="html">
         <source> We organize private parties for you and your crew. You come up with a reason to celebrate and take care of the rest. You can book the entire place for yourself (~25 seats) or you can reserve a table. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">12,16</context>
+          <context context-type="linenumber">7,12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privateEventsCateringTitle" datatype="html">
         <source>Catering</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privateEventsCateringP1" datatype="html">
         <source> Maybe you have the place but you don&apos;t have the food. No worries, we can fix that for you. We can prepare your food and deliver it to you. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
-          <context context-type="linenumber">20,23</context>
+          <context context-type="linenumber">28,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsTitle" datatype="html">
+        <source>Book your Gram expedience now</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privateEventsBookButton" datatype="html">
+        <source>Book Us</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/private-events/private-events.component.html</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="trendingTitle" datatype="html">
         <source>Recent Updates</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/trending/trending.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="trendingReadMore" datatype="html">
-        <source>Read more</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/trending/trending.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
     </body>

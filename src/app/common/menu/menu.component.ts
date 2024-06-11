@@ -35,6 +35,8 @@ export class MenuComponent {
   socialLinks = social_links;
   contact = contact;
 
+  banner: string[] = [ "./assets/banner-2.jpeg", "./assets/banner-3.jpeg", "./assets/banner-4.jpeg"];
+
   modalRef!: MdbModalRef<ReservationForm>;
 
   selectLanguage = $localize `selectLanguage`

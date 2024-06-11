@@ -78,7 +78,7 @@ export const contact: ContactData = {
         address: 'Alexandru Vaida Voevod 14A', googleLink: 'https://maps.app.goo.gl/eUMd2DnhLqL3SHjM6'
     },
     phoneNumber: '0730165163',
-    openHours: [$localize`Mon-Thu: 09-17`,$localize`Wed-Fri: 09-22`, $localize`Sat: 10-22`, $localize`Sun: Closed`]
+    openHours: [$localize`Mon-Fri: 09-22`, $localize`Sat: 10-22`, $localize`Sun: Closed`]
 }
 
 export interface DishCategory {
