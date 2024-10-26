@@ -26,10 +26,10 @@
             </ul>
             <!-- Left links -->
             <p class="small text-muted mt-2 float-end" style="font-size: small;overflow: hidden;"><a
-                    class="text-decoration-none" href="{{contact.location.googleLink}}">
+                    class="text-decoration-none " style="color: #2A674F" href="{{contact.location.googleLink}}">
                     <i class="fas fa-location-dot"></i>{{contact.location.address}} </a> <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a *ngFor="let socialLink of socialLinks" href="{{socialLink.link}}" class="ml-2">
+                <a *ngFor="let socialLink of socialLinks" href="{{socialLink.link}}" class="ml-2" style="color: #2A674F">
                     <i class="{{socialLink.name}}"></i>
                 </a>
             </p>
