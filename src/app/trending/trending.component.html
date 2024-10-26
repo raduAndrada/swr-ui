@@ -1,46 +1,8 @@
-<!-- Section: Blog v.3 -->
-<section class="my-5">
 
-  <!-- Section heading -->
-  <p class="h1-responsive font-weight-bold text-center my-5 display-3 text-black text-opacity-75" i18n="@@trendingTitle">Recent Updates</p>
-  <hr class="my-5">
 
-  <div class="d-flex justify-content-center" *ngIf="!trendingBlocks">
-    <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
-  <!-- Grid row -->
-  <div class="row" *ngFor="let trend of trendingBlocks">
-    <div class="col-lg-5 offset-lg-2 col-sm-12">
-      
-      <figure >
-        <blockquote class="blockquote">
-        <p class="font-weight-bold mb-3 text-muted fs-3 lead">
-          <a (click)="openModal(trend)"><em>{{trend.title}} </em></a>
-        </p>
-        
-          <a class="dark-grey-text" mdbBtn mdbWavesEffect (click)="openModal(trend)">{{trend.shortDescription}}</a>
-        </blockquote>
-        <!-- Post data -->
-        <figcaption class="blockquote-footer text-center">{{trend.author}}, {{trend.date}}</figcaption>
-        <!-- Read more button -->
-      </figure>
-    </div>
-    <div class="col-lg-4 col-sm-12">
-
-      <!-- Featured image -->
-      <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4 waves-light" mdbWavesEffect>
-        <img class="img-fluid" [src]="'data:image/jpeg;base64,' + trend.images[0].image" alt="Sample image">
-        <a (click)="openModal(trend)">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-
-    </div>
-    <hr class="my-5">
-
-  </div>
-
-</section>
-<!-- Section: Blog v.3 -->
+<app-event-placeholder 
+[events]="new_on_the_menu"
+[services]="undefined" 
+text="Fii la curent cu cele mai noi creații ale bucătarilor noștri! Aceste preparate proaspete și inovatoare sunt concepute pentru a încânta papilele gustative și a aduce un strop de inspirație la masa ta. Descoperă ce este în tendințe și vino să le încerci!"
+title="Nou și Delicios: Cele Mai Recente Adiții la Meniul Nostru" >
+</app-event-placeholder>

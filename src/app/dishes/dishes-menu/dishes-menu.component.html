@@ -1,43 +1,81 @@
-<div class="col-12">
+  <div class="main-color">
+  <div class="text-center p-3">
+    <h1>
+      Arome proaspete, inimi fericite!
+    </h1>
+    <p class="lead">Pentru comenzi online (doar cu ridicare de la locatie) ne gasisti la numarul de telefon: 0730165163</p>
+    <p class="lead">Pentru livrari la domiciuliu, puteti comanda prin 
+      <a href="https://food.bolt.eu/en-US/297-cluj-napoca/p/84520-gram-bistro-%2526-brunch-bar">Bolt</a>
+      sau prin <a href="https://tazz.ro/cluj-napoca/gram-bistro-brunch-bar/20943/restaurant">Tazz</a>
+    
+    </p>
+  </div>
 
-  <mdb-tabs [justified]="true" #tabs>
-    <mdb-tab *ngFor="let categ of menuCategories" title="{{categ.name}}">
+  <hr />
 
-      <div class="justify-content-center">
 
-        <div class="row">
-          <ul class="list-group list-group-light col-lg-6 col-sm-12 border"
-            *ngFor="let item of categ.subcategories; index as i">
-            <li class="list-group-item px-3 border-0 ">
-              <div class="text-center">
-                <p class="fs-2 fw-bold text-uppercase text-info text-opacity-75"
-                  style="font-family: 'Trebuchet MS', sans-serif;">{{item.name}} </p>
-              </div>
-              <div *ngFor="let dish of item.menuItems">
+  <div>
+    <div *ngFor="let categ of menuCategories;index as j">
+      <div [class]="j === 0 ? 'justify-content-center main-color' : 'justify-content-center second-color pt-2'">
 
-                <p class="py-0 my-0 "> <b class="text-info text-opacity-75 fs-5"> {{dish.name}}</b> <small
-                    class="fw-bold"> {{dish.price}} </small>
-                  <small *ngIf="dish.quantity"> - {{dish.quantity}}</small>
 
-                </p>
+        <div class="row col-12">
+          <div *ngIf="j === 0" class="col-lg-6 col-sm-12">
+            
+            <mdb-carousel >
+              <mdb-carousel-item *ngFor="let item of menu_carousel_1">
+                <img  [src]="item.img" [alt]="item.imgAlt" 
+                />
+              </mdb-carousel-item>
+              </mdb-carousel>
+         
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <h3> {{categ.name}}</h3>
+            <hr />
 
-                <p *ngIf="dish.description" class="small py-0 my-0">
-                  <small> <mark><em>{{dish.description}} </em></mark></small>
-                </p>
-              </div>
-            </li>
-          </ul>
+            <mdb-tabs [pills]="true" [fill]="true">
+
+              <mdb-tab *ngFor="let item of categ.subcategories; index as i">
+
+                <ng-template mdbTabTitle>
+                  <b style="font-size: 12px;">{{item.name}}</b>
+
+                </ng-template>
+                <div *ngFor="let dish of item.menuItems" class="bg-light  opacity-75">
+
+                  <p class="py-0 my-0 "> <b class="fs-5"
+                      style="font-family: 'Raleway', sans-serif; color:#1B5E20; font-size: 18px;"> {{dish.name}}</b>
+                    <small class="fw-bold">
+                      {{dish.price}} </small>
+                    <small *ngIf="dish.quantity"> - {{dish.quantity}}</small>
+
+                  </p>
+
+                  <p *ngIf="dish.description" class="small py-0 my-0">
+                    <small> <mark><em>{{dish.description}} </em></mark></small>
+                  </p>
+                </div>
+              </mdb-tab>
+
+            </mdb-tabs>
+          </div>
+          <div class="col-lg-6 col-sm-12" *ngIf="j === 1">
+            
+                <img  src="./assets/coffee.jpeg" alt="best-coffee"
+                />
+              
+          </div>
         </div>
-      </div>
 
-    </mdb-tab>
-  </mdb-tabs>
-  <!-- <p><a href="https://erp.foodostech.com/caffee/oatt/11x0/0bfae9110c1068fa329def869c300cdecd5247e4/#categorie31" target="_blank" rel="noopener noreferrer" i18n="@@menuLink"> Consult our menu here.</a></p> -->
+      </div>
+    </div>
+
+
+  <div class="text-center pt-4">
+    <h1>
+     Parerea clientilor nostri
+    </h1>
+    <div class="elfsight-app-d8f428ae-df3c-492f-96cf-031b903c0063" data-elfsight-app-lazy></div>
+  </div>
 </div>
-<!-- <div class="col-lg-4 col-sm-12 py-4">
-    <mdb-carousel *ngIf="dishesMenuCarousel.length" [animation]="'fade'">
-      <mdb-carousel-item *ngFor="let dishImage of dishesMenuCarousel">
-        <img [src]="'data:image/jpeg;base64,' + dishImage.image" class="img-fluid" />
-      </mdb-carousel-item>
-    </mdb-carousel>
-  </div> -->

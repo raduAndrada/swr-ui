@@ -1,10 +1,12 @@
 .nav-link.active {
     text-decoration: underline #607d8b;
     transition: text-decoration-color #607d8b 500ms;
+    color: #2A674F;
 }
 
 .nav-link:hover {
     text-decoration: underline #607d8b;
+    color: #2A674F;
 }
 
 a.sidenav-link.active {
@@ -22,17 +24,10 @@ a.sidenav-link.active {
     right: 0%;
   }
 
-#locationId {
-    position: fixed;
-}
-#sidenavToggle{
-    position: fixed;
-}
 
-#theme {
-    width: 100%;
-    height: 800px;
- 
-}
+
+
+
+
 
 

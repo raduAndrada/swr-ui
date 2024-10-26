@@ -1,0 +1,18 @@
+<div [class]="rowColor">
+    <div class=" d-flex">
+      <div *ngIf="reversed === 'true'" class="col-6">
+        <img mdbLightboxItem [src]="imgSrc" [alt]="imgAlt" class="w-100" />
+      </div>
+      <div class="col-6 align-self-center">
+          <div class="text-center">
+            <h2>{{dishName}}</h2> 
+            <p class="lead"> {{description}}</p>
+            
+          </div>
+      </div>
+      <div *ngIf="reversed !== 'true'" class="col-6" >
+        <img mdbLightboxItem [src]="imgSrc" [alt]="imgAlt" class="w-100" />
+      </div>
+    </div>
+  </div>
+  <br/>

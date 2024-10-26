@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { social_links } from '../common.model';
-import { additional_links } from './footer.model';
+import { contact, social_links } from '../common.model';
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +9,6 @@ import { additional_links } from './footer.model';
 export class FooterComponent {
   
   socialLinks = social_links;
-  additionalLinks = additional_links;
+  contact= contact;
 
 }

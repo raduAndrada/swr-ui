@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
-import { ImageBlock } from '../common/common.model';
-import { ImagesRestService } from '../common/images.rest.service';
+import { ImageBlock, private_parties } from '../common/common.model';
 import { PrivateEventsModalComponent } from './modal/private-events-modal.component';
 
 @Component({
@@ -20,6 +19,13 @@ export class PrivateEventsComponent {
     keyboard: true,
     modalClass: 'modal-large',
   }
+
+  services = [
+    "Atmosfera perfecta",
+    "Mancare delicioasa",
+    "Bautura de calitate"
+  ]
+private_events = private_parties;
 
   constructor(private modalService: MdbModalService,
   ) { }

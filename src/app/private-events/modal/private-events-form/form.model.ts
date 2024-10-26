@@ -33,8 +33,7 @@ export interface DatepickerInput {
 export const privateEventInputContactForm: InputDetails[] = [
     { type: "text", controlName: "contactFormName", placeholder: $localize `Your Name` },
     { type: "email", controlName: "contactFormEmail", placeholder: $localize`Your Email` },
-    { type: "tel", controlName: "contactFormTel", placeholder: $localize`Your Phone` },
-    { type: "text", controlName: "contactFormCompany", placeholder: $localize`Your Company's name` },
+    { type: "tel", controlName: "contactFormTel", placeholder: $localize`Your Phone` }
 ]
 
 export const privateEventType: SelectDetails[] = [
@@ -76,4 +75,4 @@ export const datePicker: DatepickerInput = {
 
 
 export const allFormFields =
-    Array.prototype.concat.apply([], [privateEventInputContactForm, contactFormSelectEventType, privateEventInput3rdForm, contactFormSelectEventSource, timePickers]);
+    Array.prototype.concat.apply([], [privateEventInputContactForm, contactFormSelectEventType]);

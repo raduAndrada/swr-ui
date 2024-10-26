@@ -21,10 +21,12 @@ import { MdbSidenavModule } from 'mdb-angular-ui-kit/sidenav';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
 import {MdbDropdownModule} from 'mdb-angular-ui-kit/dropdown';
-import { ImagesRestService } from './images.rest.service';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ReservationForm } from './reservation-form/reservation-form';
+import { CascadeContainerComponent } from './cascade-container/cascade-container.component';
+import { EventPlaceholderComponent } from './event-placeholder/event-placeholder.component';
+import { MdbRatingModule } from 'mdb-angular-ui-kit/rating';
 
 
 
@@ -34,7 +36,9 @@ import { ReservationForm } from './reservation-form/reservation-form';
     MenuComponent,
     FooterComponent,
     ConfirmationToastComponent,
-    ReservationForm
+    ReservationForm,
+    CascadeContainerComponent,
+    EventPlaceholderComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +59,7 @@ import { ReservationForm } from './reservation-form/reservation-form';
     MdbCollapseModule,
     MdbPopoverModule,
     MdbDropdownModule,
+    MdbRatingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -63,7 +68,7 @@ import { ReservationForm } from './reservation-form/reservation-form';
       }
     })
   ],
-  providers: [MdbModalService, ConnectionService, ImagesRestService],
+  providers: [MdbModalService, ConnectionService],
   exports: [
     AppRoutingModule,
     BrowserModule,
@@ -87,7 +92,11 @@ import { ReservationForm } from './reservation-form/reservation-form';
     MdbCollapseModule,
     MdbPopoverModule,
     TranslateModule,
-    ReservationForm
+    ReservationForm,
+    CascadeContainerComponent,
+    EventPlaceholderComponent,
+    MdbRatingModule,
+    
   ]
 })
 export class CoreModule { }

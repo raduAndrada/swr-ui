@@ -1,4 +1,4 @@
-<!-- Default form contact -->
+
 <form class="text-center border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <p class="h4 mb-4" i18n>Book Gram</p>
   <!-- Name -->
@@ -38,9 +38,6 @@
     </mdb-timepicker>
   </mdb-form-control> -->
 
-  <input *ngFor="let privateEventInput of privateEventInput3rdForm" type="{{privateEventInput.type}}"
-    formControlName="{{privateEventInput.controlName}}" id="{{privateEventInput.controlName}}" mdbInput
-    class="form-control mb-4" placeholder="{{privateEventInput.placeholder}}" >
 
   <!-- <label>{{contactFormSelectEventSource.label}}</label>
   <select formControlName="{{contactFormSelectEventSource.controlName}}" class="browser-default custom-select mb-4">
@@ -50,8 +47,9 @@
   </select> -->
 
   <!-- Send button -->
-  <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+<button class="btn  text-white dark-color" type="button" data-mdb-ripple-init
     type="submit"  i18n="@@form.send">Send</button>
 </form>
 <!-- Default form contact -->
 <!-- Default form contact -->
+

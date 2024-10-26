@@ -1,0 +1,30 @@
+
+<div class="text-center p-4 main-color">
+    <h1>{{title}}</h1>
+    <p class="lead">{{text}}</p>
+    <div *ngIf="services">
+    <div class="col-6 offset-3 border border-dark text-center border-2">
+      <ul class="list-inline pt-3" >
+        <li *ngFor="let service of services" class="list-inline-item pr-3"><span><i class="fas fa-check-circle"></i> {{service}}</span> </li>
+      </ul>
+    </div>
+    <div class="pt-4">
+    <button mdbRipple type="button" 
+            class="btn dark-color ">
+          <a href="tel:0730165163" class="text-white">Apelare</a></button>
+     <button mdbRipple type="button" 
+          class="btn  btn-outline-light ml-4"  style="color:#2A674F" (click)="openModal()">
+        Formular</button>
+      </div>
+  </div>
+</div>
+  
+<div *ngFor="let event of events; index as i">
+  <div class="{{i % 2 === 0 ? 'dark-color text-white': 'main-color'}}">
+    <app-cascade-container 
+    rowColor=" "
+    
+    reversed="{{i == 1 ? 'true': 'false'}}" description="{{event.description}}"
+      dishName="{{event.dishName}}" imgAlt="{{event.imgAlt}}" imgSrc="{{event.img}}" />
+    </div>
+

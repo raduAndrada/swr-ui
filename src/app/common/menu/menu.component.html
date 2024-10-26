@@ -1,126 +1,51 @@
-<!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light" [containerInside]="false">
+<div class="main-color">
 
-    <mdb-navbar-brand><a class="navbar-brand blue-grey-text" routerLink="/">Gram logo placeholder</a></mdb-navbar-brand>
-    <links>
-        <ul class="navbar-nav ml-auto">
-            <li *ngFor="let item of menuItems" class="nav-item">
-                <a class="nav-link blue-grey-text" routerLinkActive="active" mdbWavesEffect
-                    routerLink="{{item.link}}">{{item.name}} <span class="underline"></span></a>
-            </li>
-        </ul>
-    </links>
-</mdb-navbar> -->
+<nav class="navbar navbar-expand-lg ">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-2">
+            <img src="./assets/logo.PNG" alt="Gram bistro" loading="lazy" style="height: 75px;"/>
+        </a>
 
-<!-- TODO cleanup-->
-<div class="container-fluid">
-    <mdb-sidenav-layout>
-        <mdb-sidenav #sidenav="mdbSidenav">
-            <a class="ripple d-flex justify-content-center py-2 mb-1" style="border-bottom: 2px solid #f5f5f5" href="#!"
-                data-mdb-ripple-color="primary">
-                <img id="Gram Logo" src="./assets/logo.PNG" alt="Gram Logo" draggable="false" />
-            </a>
-            <div mdbDropdown class="btn-group justify-content-center">
-                <button type="button" class="btn btn-primary" data-mdb-tooltip-init title="{{ selectLanguage}}">{{
-                    curentLanguage}}</button>
-                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" mdbDropdownToggle
-                    aria-expanded="'false'">
-                    <span class="visually-hidden">Toggle Dropdown</span>
-                </button>
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" (click)="buttonsNav.toggle()" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
 
-                <ul mdbDropdownMenu class="dropdown-menu">
-                    <li *ngFor="let language of allLanguages">
-                        <a class="dropdown-item" (click)="changeLanguage(language)"
-                            href="/{{language}}/{{getCurrentRoute()}}">{{language}}</a>
-                    </li>
-                </ul>
-            </div>
-            <ul class="list-inline text-center">
-                <li class="list-inline-item" *ngFor="let socialLink of socialLinks">
-                    <a href="{{socialLink.link}}" [style]="'color:' + socialLink.color">
-                        <i class="{{socialLink.name}}"></i>
-                    </a>
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" mdbCollapse #buttonsNav="mdbCollapse">
+
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li *ngFor="let item of menuItems" class="nav-item">
+                    <a class="nav-link " routerLinkActive="active" mdbWavesEffect
+                        routerLink="{{item.link}}"> <b>{{item.name}} </b><span class="underline"></span></a>
                 </li>
             </ul>
-            <hr class="mb-4 mt-0" />
-            <ul class="sidenav-menu px-1 pb-5">
-                <ng-container *ngFor="let item of menuItems">
-                    <mdb-sidenav-item [ngClass]="{'pt-3 d-block': item.subheading}">
-                        <span *ngIf="item.subheading" class="sidenav-subheading text-muted">{{ item.subheading }}</span>
-                        <a class="sidenav-link" tabindex="0" routerLinkActive="active" routerLink="{{item.link}}"
-                            mdbRipple (click)="sidenav.toggle()">
-                            <!-- <i class="fas {{item.icon}} fa-fw me-3" ></i> -->
-                            {{ item.name }}
-                        </a>
-                        <ul *ngIf="item.submenu" class="sidenav-collapse" mdbCollapse>
-                            <li class="sidenav-item" *ngFor="let subitem of item.submenu">
-                                <a class="sidenav-link" tabindex="0" mdbRipple routerLink="{{item.link}}"
-                                    (click)="sidenav.toggle()">{{subitem.name}}</a>
-                            </li>
-
-                        </ul>
-                    </mdb-sidenav-item>
-                </ng-container>
-            </ul>
-            <div class="col-12 px-4 pb-5">
-                <hr class="mb-4 mt-0 mx-4" />
-                <p class="small text-muted" style="font-size: small;"><a class="text-decoration-none"
-                        href="{{contact.location.googleLink}}">
-                        {{contact.location.address}} </a>
-                    <br> <a href="{{'tel:' + contact.phoneNumber" style="font-size: small;">{{contact.phoneNumber}}</a>
-                </p>
-                <p class="small text-muted">{{contact.openHours[0]}} <br> {{contact.openHours[1]}} <br>
-                    {{contact.openHours[2]}} </p>
-            </div>
-        </mdb-sidenav>
-        <mdb-sidenav-content #sidenavContent>
-            <div class="row ">
-                <!-- Toggler -->
-                <div class="col-2">
-                    <button #sidenavToggle class="btn btn-ouline btn-secondary btn-lg" (click)="sidenav.toggle()">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-                <div class="col-7 offset-3 col-sm-6 text-center" *ngIf="showLocation" id="locationId">
-                    <p class="small text-muted " style="font-size: small;"><a class="text-decoration-none"
-                            href="{{contact.location.googleLink}}">
-                            {{contact.location.address}} </a>
-                        <br> <a href="{{'tel:' + contact.phoneNumber">&nbsp;&nbsp;&nbsp;&nbsp;
-                            {{contact.phoneNumber}}</a>
-                    </p>
-                </div>
-                <hr class="my-3" />
-            </div>
-            <div class="container-fluid px-2 py-2 justify-content-center ">
-                <div class="border">
-
-                    <mdb-carousel [controls]="true">
-                        <mdb-carousel-item *ngFor="let bannerItem of banner">
-                            <img src="{{bannerItem}}" class="d-inline-block w-100 img-fluid"/>
-                        </mdb-carousel-item>
-                    </mdb-carousel>
-                    <!--<img id="theme" src="./assets/tte-banner.png" class="img-fluid">
-
-
-                <div class="d-grid gap-2 col-8 mx-auto pt-2">
-                    <a (click)="openModal()" class="btn btn-outline-dark"
-                        i18n="@@privateEventsBookButton">Book Us</a>
-                </div> -->
-                    <div class="d-grid gap-2 col-8 mx-auto pt-2 pb-3" *ngIf="currentPageNotMenu()">
-                        <button class="btn btn-outline-dark" type="button" data-mdb-ripple-init i18n="@@ourMenu"
-                            routerLink="{{menuItems[0].link}}">Meniul Nostru</button>
-                    </div>
-                </div>
-                <hr class="my-3" />
-                <router-outlet></router-outlet>
-            </div>
-            <div class="fixed-action-btn" id="fixed1">
-                <a class="btn btn-secondary btn-floating" data-mdb-ripple-color="dark" #btnBackToTop
-                    (click)="scrollToTop()" [ngStyle]="{'display': display}" id="btnBackToTop">
-                    <i class="fas fa-arrow-up fa-lg"></i>
+            <!-- Left links -->
+            <p class="small text-muted mt-2 float-end" style="font-size: small;overflow: hidden;"><a
+                    class="text-decoration-none" href="{{contact.location.googleLink}}">
+                    <i class="fas fa-location-dot"></i>{{contact.location.address}} </a> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a *ngFor="let socialLink of socialLinks" href="{{socialLink.link}}" class="ml-2">
+                    <i class="{{socialLink.name}}"></i>
                 </a>
-            </div>
-            <app-footer></app-footer>
-        </mdb-sidenav-content>
-    </mdb-sidenav-layout>
+            </p>
 
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
 </div>
+    <router-outlet></router-outlet>
+
+    <div class="fixed-action-btn" id="fixed1">
+        <a class="btn btn-secondary btn-floating" data-mdb-ripple-color="dark" #btnBackToTop (click)="scrollToTop()"
+            [ngStyle]="{'display': display}" id="btnBackToTop">
+            <i class="fas fa-arrow-up fa-lg"></i>
+        </a>
+    </div>
+    <app-footer></app-footer>

@@ -1,9 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 
 body {
-    font-family: 'Lato', sans-serif;
-    color: #060402;
+    // font-family: 'Lato', sans-serif;
+    // color: #333333;
     overflow-x: hidden; 
   }
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+p, a, span {
+    font-family: 'Raleway', sans-serif;
+}
+
+.main-color {
+    background-color: #F7EDC9;
+}
+
+.second-color {
+    background-color: #E3EBDF;
+}
+
+.terniary-color {
+  background-color: #d4c525;
+}
+
+.dark-color {
+  background-color: #2A674F;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

@@ -19,9 +19,7 @@ export class MenuComponent {
 
   @ViewChild('btnBackToTop')
   btnBackToTop!: HTMLButtonElement;
-  languages = ["ro", "en"];
-  allLanguages = ["ro", "en"];
-  curentLanguage: any;
+ 
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event: any){
     this.scrollFunction();
@@ -35,19 +33,13 @@ export class MenuComponent {
   socialLinks = social_links;
   contact = contact;
 
-  banner: string[] = [ "./assets/banner-2.jpeg", "./assets/banner-3.jpeg", "./assets/banner-4.jpeg"];
 
   modalRef!: MdbModalRef<ReservationForm>;
 
-  selectLanguage = $localize `selectLanguage`
-
-  constructor (public readonly translateService: TranslateService,
+  constructor (
     public readonly router: Router,
     private modalService: MdbModalService) {
-    this.curentLanguage = localStorage.getItem('Language');
-    if (!this.curentLanguage) {
-      this.curentLanguage = "ro";
-    }
+  
   }
 
   getCurrentRoute() {
@@ -55,17 +47,6 @@ export class MenuComponent {
 }
 
 
-
-  changeLanguage(lang: string) {
-    this.languages = this.allLanguages.filter(( language) => {
-        return language !== lang;
-    });
-    this.curentLanguage = lang;
-    localStorage.setItem('Language', lang);
-    if (isDevMode()) {
-       location.reload();
-    }
-}
 
   scrollFunction() {
     if (
@@ -104,7 +85,7 @@ export class MenuComponent {
   }
 
   currentPageNotMenu(){
-    return !this.router.url.includes(menuItems[0].link);
+    return !this.router.url.includes(menuItems[1].link);
   }
 
 }

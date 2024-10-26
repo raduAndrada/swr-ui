@@ -7,7 +7,7 @@ export const environment = {
       imagesApi: "image-blocks"
     },
     menu: {
-      serverPort: "http://18.193.130.217:8901/api/",
+      serverPort: "localhost:8901/api/",
       menuApi: "menu",
     },
     communicationChannel: {

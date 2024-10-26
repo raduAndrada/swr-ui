@@ -1,12 +1,12 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { Category, ImageBlock } from 'src/app/common/common.model';
+import { Category, ImageBlock, Subcategory, menu_carousel_1, menu_carousel_2} from 'src/app/common/common.model';
 import { MenuItemsService } from '../dishes.rest.service';
 
 import {
   pulseAnimation
 } from 'mdb-angular-ui-kit/animations';
-import { ImagesRestService } from 'src/app/common/images.rest.service';
 import { MdbTabsComponent } from 'mdb-angular-ui-kit/tabs';
+import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 
 
 
@@ -22,11 +22,20 @@ export class DishesMenuComponent implements AfterViewInit, OnInit {
 
   menuCategories: Category[] = [];
 
-  dishesMenuCarousel: ImageBlock[] = [];
+  menu_carousel_1 = menu_carousel_1;
+  menu_carousel_2 = menu_carousel_2;
+
+  config = {
+    animation: true,
+    backdrop: true,
+    ignoreBackdropClick: false,
+    keyboard: true,
+    modalClass: 'modal-lg',
+  }
 
   constructor(
-    private menuItemsRest: MenuItemsService,
-    private imagesRest: ImagesRestService
+    private modalService: MdbModalService,
+    private menuItemsRest: MenuItemsService
   ) {
 
   }
@@ -44,7 +53,6 @@ export class DishesMenuComponent implements AfterViewInit, OnInit {
     //   .subscribe(menu => {
     //     this.dishesMenu = menu;
     //   });
-    const origin = 'dishes-menu::carousel';
 
     // this.imagesRest.findAllByOrigin(origin)
     //   .subscribe(dishesMenuCarousel => {
@@ -52,8 +60,10 @@ export class DishesMenuComponent implements AfterViewInit, OnInit {
     //   });
   }
 
+
+
   ngAfterViewInit(): void {
-  
+
   }
 
 

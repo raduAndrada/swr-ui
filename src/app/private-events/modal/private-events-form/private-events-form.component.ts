@@ -21,7 +21,6 @@ export class PrivateEventsForm {
 
   privateEventInputContactForm = privateEventInputContactForm;
   contactFormSelectEventType = contactFormSelectEventType;
-  privateEventInput3rdForm = privateEventInput3rdForm;
   contactFormSelectEventSource = contactFormSelectEventSource;
 
 
@@ -45,11 +44,7 @@ export class PrivateEventsForm {
       'contactFormName': ['', Validators.required],
       'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
       'contactFormTel': ['', Validators.required],
-      'contactFormCompany': [''],
       'contactFormPartyType': ['', Validators.required],
-      'contactRequestDate': ['', Validators.required],
-      'contactNumberOfPeople': ['', Validators.compose([Validators.required, Validators.min(1)])],
-      'contactAdditionalInfo': [''],
       // 'contactPrivateEventSource': [''],
       // 'startTimeControl': ['06:00 PM', Validators.required],
       // 'endTimeControl': ['11:00 PM', Validators.required],
@@ -61,11 +56,7 @@ export class PrivateEventsForm {
     const reservation: ReservationConfirmation = Object.assign({
       name: this.contactForm.get("contactFormName")?.value,
       email: this.contactForm.get("contactFormEmail")?.value,
-      tel: this.contactForm.get("contactFormTel")?.value,
-      company: this.contactForm.get("contactFormCompany")?.value,
-      requestDate: this.contactForm.get("contactRequestDate")?.value,
-      noOfPeople: this.contactForm.get("contactNumberOfPeople")?.value,
-      additionalInfo: this.contactForm.get("contactAdditionalInfo")?.value
+      tel: this.contactForm.get("contactFormTel")?.value
     });
 
     var lang = localStorage.getItem("Language");
@@ -87,8 +78,8 @@ export class PrivateEventsForm {
     setTimeout(() => this.notificationRef = this.notificationService.open(ConfirmationToastComponent, {
       position: 'top-center',
       data: {
-        toastTitle: $localize`Request Recieved`,
-        toastMessage: $localize`Someone will contact you soon`
+        toastTitle: 'Multumim pentru solicitare!',
+        toastMessage: 'Cineva din echipa noastra va lua legatura cu tine in cel mai scurt timp posibil.'
       }
     }), 1500);
   }

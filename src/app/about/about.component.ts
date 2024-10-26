@@ -1,36 +1,22 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { contact, ImageBlock, social_links } from '../common/common.model';
-import { ImagesRestService } from '../common/images.rest.service';
+import { Component } from '@angular/core';
+import { contact,  social_links } from '../common/common.model';
+import { menuItems } from '../common/menu/menu.model';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit, OnDestroy {
+export class AboutComponent  {
 
   socialLinks = social_links;
   contact = contact;
+  menuItems = menuItems;
 
-  aboutCarousel: ImageBlock[] = [];
-  subscriptions: Subscription[] = [];
-
-  constructor(
-    private imagesRest: ImagesRestService) {
-  }
 
   ngOnInit(): void {
-    //refactor this into a separate component
-    const origin = 'about::carousel';
-    // this.subscriptions.push(
-    //   this.imagesRest.findAllByOrigin(origin)
-    //     .subscribe(dishesMenuCarousel => {
-    //       this.aboutCarousel = dishesMenuCarousel;
-    //     }));
+ 
   }
 
-  ngOnDestroy(): void {
-    this.subscriptions.forEach(sub => sub.unsubscribe());
-  }
+
 }
