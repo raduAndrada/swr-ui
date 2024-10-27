@@ -2,8 +2,8 @@
 FROM nginx:latest
 # Copying compiled code and nginx config to different folder
 # NOTE: This path may change according to your project's output folder 
-COPY /certificates/certificate.crt /usr/share/nginx/html/certificates
-COPY /certificates/private.key /usr/share/nginx/html/certificates
+
+COPY /certificates /etc/nginx/ssl
 COPY /dist/swr-ui /usr/share/nginx/html
 COPY /nginx.conf  /etc/nginx/conf.d/default.conf
 # Exposing a port, here it means that inside the container 
