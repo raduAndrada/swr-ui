@@ -1,6 +1,6 @@
 
 <form class="text-center border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <p class="h4 mb-4" i18n>Book Gram</p>
+  <p class="h4 mb-4" >Book Gram</p>
   <!-- Name -->
   <input *ngFor="let privateEventInput of privateEventInputContactForm" type="{{privateEventInput.type}}"
     formControlName="{{privateEventInput.controlName}}" id="{{privateEventInput.controlName}}" mdbInput
@@ -8,7 +8,7 @@
   <!-- Subject -->
   <label>{{contactFormSelectEventType.label}}</label>
   <select formControlName="{{contactFormSelectEventType.controlName}}" class="browser-default custom-select mb-4">
-    <option value="" disabled i18n>Choose option</option>
+    <option value="" disabled >Choose option</option>
     <option *ngFor="let option of contactFormSelectEventType.options" value="{{option.value}}" >{{option.text}}</option>
   </select>
 <!-- 
@@ -48,7 +48,7 @@
 
   <!-- Send button -->
 <button class="btn  text-white dark-color" type="button" data-mdb-ripple-init
-    type="submit"  i18n="@@form.send">Send</button>
+    type="submit"  ="@@form.send">Send</button>
 </form>
 <!-- Default form contact -->
 <!-- Default form contact -->

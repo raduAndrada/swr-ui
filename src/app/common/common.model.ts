@@ -1,44 +1,33 @@
 export interface Category {
-    name : string;
-    subcategories : Subcategory[] ; 
+    name: string;
+    subcategories: Subcategory[];
 }
 
 export interface Subcategory {
-    name : string;
-    menuItems : MenuItem[] ; 
+    name: string;
+    menuItems: MenuItem[];
     img: []
 }
 
 export interface MenuItem {
-    name : string;
-    description : string; 
-    price : string;
-    quantity : string;
-    img: string;
-}
-
-export interface ImageBlock {
-    id: number;
-    title: string;
+    name: string;
     description: string;
-    origin: string;
-    additionalData: string; //JSON store anything else needed
-    image: any;
-    filename: string;
-    contentType: string;
+    price: string;
+    quantity: string;
+    img: string;
 }
 
 export interface ContactData {
     location: { address: string; googleLink: string };
     phoneNumber: string;
     email?: string;
-openHours: string[];
+    openHours: string[];
 }
 
 
 export interface SocialLink {
     link: string;
-name: string;
+    name: string;
     color?: string;
 }
 
@@ -98,7 +87,7 @@ export const contact: ContactData = {
         address: 'Alexandru Vaida Voevod 14A, Cluj-Napoca', googleLink: 'https://maps.app.goo.gl/eUMd2DnhLqL3SHjM6'
     },
     phoneNumber: '0730165163',
-    openHours: [$localize`Mon-Fri: 09-22`, $localize`Sat: 10-22`, $localize`Sun: Closed`],
+    openHours: [`Lun-Vin: 09-22`, `Sam: 10-22`, `Dum: Inchis`],
     email: 'rezervari@bistrogram.ro'
 }
 
@@ -159,8 +148,8 @@ export const catering_1 = {
     imgAlt: "best catering"
 }
 
-export const coffee = 
-    {img: "assets/coffee.jpeg", imgAlt: "best coffee"}
+export const coffee =
+    { img: "assets/coffee.jpeg", imgAlt: "best coffee" }
 
 
 export const clients_top_picks = [
@@ -171,29 +160,29 @@ export const clients_top_picks = [
 
 export const menu_carousel_1 = [
     eggs_benedict,
-    foccacia , 
-    pie_combo, 
-    {img: "./assets/caesar.jpeg", imgAlt: "best caesar salad"},
-    {img: "./assets/sandwich.jpeg", imgAlt: "best sandwich"},
-    {img: "./assets/steak.jpeg", imgAlt: "best steak"}
+    foccacia,
+    pie_combo,
+    { img: "./assets/caesar.jpeg", imgAlt: "best caesar salad" },
+    { img: "./assets/sandwich.jpeg", imgAlt: "best sandwich" },
+    { img: "./assets/steak.jpeg", imgAlt: "best steak" }
 
 ]
 
 export const menu_carousel_2 = [
     coffee,
-    {img: "./assets/ice-coffee.jpeg", imgAlt: "best ice coffee"},
-    {img: "./assets/wines-1.jpeg", imgAlt: "best white wine"}
+    { img: "./assets/ice-coffee.jpeg", imgAlt: "best ice coffee" },
+    { img: "./assets/wines-1.jpeg", imgAlt: "best white wine" }
 
 ]
 
 
-export const catering =[
+export const catering = [
     catering_1,
     pie_combo,
     foccacia
 ]
 
-export const new_on_the_menu =[
+export const new_on_the_menu = [
     pie_combo,
     daily_meal
 ]
@@ -203,3 +192,4 @@ export const private_parties = [
     private_events_2,
     private_events_3
 ]
+

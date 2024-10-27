@@ -59,11 +59,7 @@ export class PrivateEventsForm {
       tel: this.contactForm.get("contactFormTel")?.value
     });
 
-    var lang = localStorage.getItem("Language");
-    if (!lang) {
-      lang = "ro";
-    }
-    this.reservationConfirmationRestService.sendReservationConfirmationEmail(reservation,  lang).subscribe(() => {
+    this.reservationConfirmationRestService.sendReservationConfirmationEmail(reservation,  "ro").subscribe(() => {
       this.contactForm.reset();
       this.disabledSubmitButton = true;
       this.openToast();

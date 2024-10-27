@@ -2,7 +2,6 @@ import { NgModule } from "@angular/core";
 import { CoreModule } from "../common/common.module";
 import { DishesMenuComponent } from './dishes-menu/dishes-menu.component';
 import { MenuItemsService } from "./dishes.rest.service";
-import { CascadeContainerComponent } from "../common/cascade-container/cascade-container.component";
 
 @NgModule({
     declarations: [

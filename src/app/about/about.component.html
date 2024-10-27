@@ -1,34 +1,26 @@
 <div class="main-color">
-<div class="d-flex justify-content-left">
-  <div class="col-lg-9 col-sm-6 mt-4">
-      <h1>Descoperă aromele Clujului în fiecare îmbucătură.</h1>
-      <p class="lead">Colaborăm cu fermieri și artizani locali pentru a-ți aduce preparate vibrante,
-        de sezon, care celebrează ce are mai bun regiunea noastră. Vino să te bucuri de o masă proaspătă și de neuitat.</p>
-  </div>
-  <div class="col-lg-3 col-sm-6 row">
+  <div class="d-flex justify-content-left">
+    <div class="col-lg-9 col-sm-6 mt-4">
+      <h1>{{header}}</h1>
+      <p class="lead">{{lead}}</p>
+    </div>
+    <div class="col-lg-3 col-sm-6 row">
       <div class="col-8 text-center pt-4">
-          <!-- <h6>GRAM</h6> -->
-          <hr class="bg-white">
+        <!-- <h6>GRAM</h6> -->
+        <hr class="bg-white">
       </div>
-  
+
       <div class="col-10 offset-1">
-          <ul class="list-inline">
-              <li class="list-inline-item"><i class="fas fa-mug-hot fa-xl"></i></li>
-              <li class="list-inline-item"><i class="fas fa-cookie-bite fa-xl"></i></li>
-              <li class="list-inline-item"><i class="fas fa-bread-slice fa-xl"></i></li>
-              <li class="list-inline-item"><i class="fas fa-egg fa-xl"></i></li>
-              <li class="list-inline-item"><i class="fas fa-carrot fa-xl"></i></li>
-              <li class="list-inline-item"><i class="fas fa-bacon fa-xl"></i></li>
-              <li class="list-inline-item"><i class="fas fa-wine-bottle fa-xl"></i></li>
-              <li class="list-inline-item"><i class="fas fa-birthday-cake fa-xl"></i></li>
-          </ul>
+        <ul class="list-inline">
+          <li *ngFor="let icon of icons" class="list-inline-item"><i [class]="'fas fa-xl ' + icon"></i></li>
+        </ul>
       </div>
       <div class="col-10 offset-1">
-          <button class="btn  text-white dark-color" type="button" data-mdb-ripple-init
-              i18n="@@ourMenu" routerLink="{{menuItems[1].link}}">Meniul Nostru</button>
+        <button class="btn  text-white dark-color" type="button" data-mdb-ripple-init 
+          routerLink="{{menuItems[1].link}}">Meniul Nostru</button>
       </div>
+    </div>
   </div>
-</div>
 </div>
 <!-- Background image -->
 <div class="p-5 bg-image" style="
@@ -45,77 +37,49 @@ height: 800px;
 <div class="row d-flex p-5 second-color text-center ">
   <h1>Îți e foame? </h1>
   <h1>Avem un loc rezervat pentru tine!</h1>
-  <p class="lead"> Fie că vrei o gustare rapidă între cursuri sau să te relaxezi cu prietenii la o masă delicioasă, te așteptăm cu preparate făcute din cele mai bune ingrediente locale. Hai la noi să-ți transformi următoarea masă în cel mai bun moment al zilei — cu arome de neuitat, direct din Cluj! </p>
+  <p class="lead"> Fie că vrei o gustare rapidă între cursuri sau să te relaxezi cu prietenii la o masă delicioasă, te
+    așteptăm cu preparate făcute din cele mai bune ingrediente locale. Hai la noi să-ți transformi următoarea masă în
+    cel mai bun moment al zilei — cu arome de neuitat, direct din Cluj! </p>
   <br />
   <br />
 </div>
 
-<div class="row">
-  <div class="col-6 text-white text-center" style="background-color: #2A674F;">
-    <div class="col-12" style="height: 400px;"></div>
-      <h1 >Catering</h1>
-      <p class="lead">Avem grijă de mâncare, tu bucură-te de petrecere! Catering delicios și local, pentru evenimente memorabile.</p>
-  </div>
-<div class="p-5 bg-image col-6" style="
-background-image: url('assets/catering-1.jpeg');
-height: 800px;
-">
-  <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+<app-row-template
+  [reversed]="false"
+  backgroundImage="url('assets/catering-1.jpeg')"
+  title="Catering"
+  lead="Avem grijă de mâncare, tu bucură-te de petrecere! Catering delicios și local, pentru evenimente memorabile."
+  aditionalContainerClasses="text-white"
+  rowColor="dark-color"
+/>
 
-  </div>
-</div>
-<br/>
-<br/>
-<div class="second-color ">
-<div class="row " >
-  <div class="p-5 bg-image col-6" style="
-background-image: url('assets/private-events-1.jpeg');
-height: 800px;
-">
-  <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+<app-row-template
+  [reversed]="true"
+  backgroundImage="url('assets/private-events-1.jpeg')"
+  title="Evenimente"
+  lead="Avem pentru tine o colecție impresionantă de vinuri și șampanii, toate alese cu grijă de la
+  cramele locale. Fie că ești un cunoscător sau doar vrei să te bucuri de un pahar bun, te așteaptă o experiență
+  autentică, completată de aromele noastre unice."
+  aditionalContainerClasses=""
+  rowColor="second-color"
+/>
+  <div class="main-color p-4">
+    <div class="offset-2 row ">
+      <h3>Dintre preferatele clientilor nostri: </h3>
+      <br />
+      <div *ngFor="let pick of clientsTopPicks" class="card col-lg-3 offset-lg-1 col-sm-12 offset-sm-0 mt-2">
+        <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+          <img [src]="pick.img" class="img-fluid" [alt]="pick.imgAlt" style="height: 250px; width: auto;"/>
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
 
-  </div>
- 
-</div>
-  <div class="col-6 text-center" >
-    <div class="col-12" style="height: 400px;"></div>
-      <h1 >Evenimente</h1>
-      <p class="lead">Avem pentru tine o colecție impresionantă de vinuri și șampanii, toate alese cu grijă de la cramele locale. Fie că ești un cunoscător sau doar vrei să te bucuri de un pahar bun, te așteaptă o experiență autentică, completată de aromele noastre unice.</p>
-  </div>
-</div>
-</div>
-<div class="main-color p-4">
-<div class="offset-2 row ">
-  <h3>Dintre preferatele clientilor nostri: </h3>
-  <br />
-  <div class="card col-lg-3 offset-lg-2 col-sm-12 offset-sm-0" >
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="./assets/eggs-benedict.jpeg" class="img-fluid" alt="best eggs benedict" />
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <div class="card-body">
-      <h5 class="card-title">Oua Benedict</h5>
-      <p class="card-text">Oua, bacon, chifla englezeasca, sos olandez facut in casa</p>
+        <div class="card-body">
+          <h5 class="card-title">{{pick.dishName}}</h5>
+          <p class="card-text">{{pick.description}}</p>
+        </div>
+      </div>
+
     </div>
   </div>
-  <div class="card col-lg-3 col-sm-12 ml-lg-2" >
-    <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
-      <img src="./assets/foccacia.jpeg" class="img-fluid" alt="best foccacia" style="height: 70%; width: 100%;" />
-      <a href="#!">
-        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-      </a>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Foccacia Mortadella</h5>
-      <p class="card-text">Focaccia artizanala, pesto, mortadella, salsa de rosii, mozzarella bufala, ulei de masline
-      </p>
-    </div>
-  </div>
-</div>
-</div>

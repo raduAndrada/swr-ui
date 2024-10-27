@@ -1,0 +1,29 @@
+
+<div [class]="rowColor">
+
+
+<div class="row">
+    <div *ngIf="reversed === true" class ="p-5 bg-image col-6" [style]="
+    'background-image:' +  backgroundImage + ';' +
+    'height: 800px;'
+    ">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+  
+          </div>
+      </div>
+    <div [class]="'col-6 text-center ' +  aditionalContainerClasses">
+        <div class="col-12" style="height: 400px;"></div>
+        <h1>{{title}}</h1>
+        <p class="lead">{{lead}}</p>
+    </div>
+    <div *ngIf="reversed === false" class="p-5 bg-image col-6" [style]="
+  'background-image:' +  backgroundImage + ';' +
+  'height: 800px;'
+  ">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+
+        </div>
+    </div>
+</div>
+
+</div>

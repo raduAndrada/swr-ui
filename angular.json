@@ -5,14 +5,6 @@
   "projects": {
     "swr-ui": {
       "projectType": "application",
-      "i18n": { 
-        "sourceLocale": "en", 
-        "locales": { 
-          "ro": { 
-            "translation": "src/locale/messages.ro.xlf" 
-          }
-        }
-      },
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -48,9 +40,7 @@
               "node_modules/animate.css/animate.css",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "localize": true, 
-            "i18nMissingTranslation": "warning"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -80,9 +70,6 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
-            },
-            "ro" : {
-              "localize" : ["ro"]
             }
           },
           "defaultConfiguration": "production"
@@ -91,20 +78,20 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "swr-ui:build:production,ro"
+              "buildTarget": "swr-ui:build:production"
             },
             "development": {
-              "buildTarget": "swr-ui:build:development,ro"
+              "buildTarget": "swr-ui:build:development"
             }
           },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "defaultConfiguration": "development",
           "options": {
-            "format": "xlf",
-            "outputPath": "src/locale",
-            "buildTarget": "swr-ui:build"
+            "ssl": true,
+            "sslKey": "./certificates/private.key",
+            "sslCert": "./certificates/certificate.crt"
+
+
+            
           }
         },
         "test": {

@@ -60,11 +60,8 @@ export class ReservationForm {
     });
     console.log(reservation)
 
-    var lang = localStorage.getItem("Language");
-    if (!lang) {
-      lang = "ro";
-    }
-    this.reservationConfirmationRestService.sendReservationConfirmationEmail(reservation,  lang).subscribe(() => {
+    
+    this.reservationConfirmationRestService.sendReservationConfirmationEmail(reservation,  "ro").subscribe(() => {
       this.modalRef.close()
       this.contactForm.reset();
       this.disabledSubmitButton = true;
@@ -80,8 +77,8 @@ export class ReservationForm {
     setTimeout(() => this.notificationRef = this.notificationService.open(ConfirmationToastComponent, {
       position: 'top-center',
       data: {
-        toastTitle: $localize`Request Recieved`,
-        toastMessage: $localize`Someone will contact you soon`
+        toastTitle: `Am primit solicitarea ta!`,
+        toastMessage: `Te vom contacta in cel mai scurt timp pentru a confirma.`
       }
     }), 1500);
   }

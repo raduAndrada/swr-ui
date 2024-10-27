@@ -31,29 +31,29 @@ export interface DatepickerInput {
 
 
 export const privateEventInputContactForm: InputDetails[] = [
-    { type: "text", controlName: "contactFormName", placeholder: $localize `Your Name` },
-    { type: "email", controlName: "contactFormEmail", placeholder: $localize`Your Email` },
-    { type: "tel", controlName: "contactFormTel", placeholder: $localize`Your Phone` }
+    { type: "text", controlName: "contactFormName", placeholder: `Nume` },
+    { type: "email", controlName: "contactFormEmail", placeholder: `Email` },
+    { type: "tel", controlName: "contactFormTel", placeholder: `Telefon` }
 ]
 
 export const privateEventType: SelectDetails[] = [
     { value: "1", text: "Catering" },
-    { value: "2", text: $localize `Private Party` }
+    { value: "2", text:  `Eveniment privat` }
 ]
 
 export const contactFormSelectEventType: SelectInput = {
-    controlName: "contactFormPartyType", options: privateEventType, label: $localize `Type of event`
+    controlName: "contactFormPartyType", options: privateEventType, label:  `Tipul evenimentului`
 }
 
 export const privateEventInput3rdForm: InputDetails[] = [
-    { type: "number", controlName: "contactNumberOfPeople", placeholder: $localize `Number of people` },
-    { type: "text", controlName: "contactRequestDate", placeholder: $localize `Request a date` },
-    { type: "textarea", controlName: "contactAdditionalInfo", placeholder: $localize `Additional information` }
+    { type: "number", controlName: "contactNumberOfPeople", placeholder:  `Numarul de persoane` },
+    { type: "text", controlName: "contactRequestDate", placeholder:  `Data` },
+    { type: "textarea", controlName: "contactAdditionalInfo", placeholder:  `Alte informatii` }
 ]
 
 
 export const privateEventSource: SelectDetails[] = [
-    { value: "1", text: $localize `Someone told me about you` },
+    { value: "1", text:  `Someone told me about you` },
     { value: "2", text: "Website" },
     { value: "3", text: "Google" },
     { value: "4", text: "Social Media" },
@@ -61,7 +61,7 @@ export const privateEventSource: SelectDetails[] = [
 ]
 
 export const contactFormSelectEventSource: SelectInput = {
-    controlName: "contactPrivateEventSource", options: privateEventSource, label: $localize `Where did you find out about us?`
+    controlName: "contactPrivateEventSource", options: privateEventSource, label:  `Cum ai aflat de noi?`
 }
 
 export const timePickers: TimepickerInput[] = [
@@ -70,7 +70,7 @@ export const timePickers: TimepickerInput[] = [
 ]
 
 export const datePicker: DatepickerInput = {
-    controlName: "datepickerControl", label: $localize `Select Date`
+    controlName: "datepickerControl", label:  `Select Date`
 }
 
 

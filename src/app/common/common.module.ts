@@ -27,6 +27,7 @@ import { ReservationForm } from './reservation-form/reservation-form';
 import { CascadeContainerComponent } from './cascade-container/cascade-container.component';
 import { EventPlaceholderComponent } from './event-placeholder/event-placeholder.component';
 import { MdbRatingModule } from 'mdb-angular-ui-kit/rating';
+import { RowTemplateComponent } from './row-template/row-template.component';
 
 
 
@@ -38,7 +39,8 @@ import { MdbRatingModule } from 'mdb-angular-ui-kit/rating';
     ConfirmationToastComponent,
     ReservationForm,
     CascadeContainerComponent,
-    EventPlaceholderComponent
+    EventPlaceholderComponent,
+    RowTemplateComponent
   ],
   imports: [
     BrowserModule,
@@ -96,11 +98,10 @@ import { MdbRatingModule } from 'mdb-angular-ui-kit/rating';
     CascadeContainerComponent,
     EventPlaceholderComponent,
     MdbRatingModule,
-    
+    RowTemplateComponent
   ]
 })
 export class CoreModule { }
 
-export function httpLoaderClient(http: HttpClient) {
-  return new TranslateHttpLoader(http, `../../assets/i18n/`, `.json`);
+export function httpLoaderClient() {
 }

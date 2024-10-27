@@ -7,11 +7,11 @@ export const environment = {
       imagesApi: "image-blocks"
     },
     menu: {
-      serverPort: "http://18.193.130.217:8901/api/",
+      serverPort: "https://swr-menu:8901/api/",
       menuApi: "menu",
     },
     communicationChannel: {
-      serverPort: "http://18.193.130.217:8902/api/",
+      serverPort: "http://swr-cc:8902/api/",
       emailApi: "communication-channel/email/reservations"
     }
   };

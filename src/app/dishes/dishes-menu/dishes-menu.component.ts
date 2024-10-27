@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { Category, ImageBlock, Subcategory, menu_carousel_1, menu_carousel_2} from 'src/app/common/common.model';
+import { Category, menu_carousel_1, menu_carousel_2} from 'src/app/common/common.model';
 import { MenuItemsService } from '../dishes.rest.service';
 
 import {
@@ -44,20 +44,7 @@ export class DishesMenuComponent implements AfterViewInit, OnInit {
     this.menuItemsRest.getCategories()
       .subscribe(categories => {
         this.menuCategories = categories;
-        setTimeout(() => {
-          this.tabs.setActiveTab(0);
-        }, 0);
       });
-
-    // this.trendingService.getMenu()
-    //   .subscribe(menu => {
-    //     this.dishesMenu = menu;
-    //   });
-
-    // this.imagesRest.findAllByOrigin(origin)
-    //   .subscribe(dishesMenuCarousel => {
-    //     this.dishesMenuCarousel = dishesMenuCarousel;
-    //   });
   }
 
 
