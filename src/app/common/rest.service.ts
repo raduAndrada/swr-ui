@@ -13,6 +13,7 @@ export class RestService<T> {
 
     get(): Observable<T[]> {
         return this.http.get<T[]>(this.baseUrl).pipe(
+
             catchError(this.handleError<T[]>('getList'))
         );
     }
@@ -50,6 +51,8 @@ export class RestService<T> {
     handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
             console.error(error); // log to console instead
+        console.log(this.baseUrl);
+
             return of(result as T);
         };
     }

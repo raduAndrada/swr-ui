@@ -58,7 +58,6 @@ export class ReservationForm {
       noOfPeople: this.contactForm.get("contactNumberOfPeople")?.value,
       additionalInfo: this.contactForm.get("contactFormHour")?.value
     });
-    console.log(reservation)
 
     
     this.reservationConfirmationRestService.sendReservationConfirmationEmail(reservation,  "ro").subscribe(() => {
@@ -68,7 +67,6 @@ export class ReservationForm {
       this.openToast();
    
     }, error => {
-      console.log('Error', error);
     });
   }
 

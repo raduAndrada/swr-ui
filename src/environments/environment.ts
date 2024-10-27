@@ -1,17 +1,11 @@
 export const environment = {
-  production: true,
-  staticData: {
-    serverPort: "http://18.193.130.217:8900/api/",
-    trendingApi: "trending-blocks",
-    teamApi: "team-blocks",
-    imagesApi: "image-blocks"
-  },
+  production: false,
   menu: {
-    serverPort: "https://18.153.209.219:8901/api/",
+    serverPort: "https://localhost:8901/api/",
     menuApi: "menu",
   },
   communicationChannel: {
-    serverPort: "https://18.153.209.219:8902/api/",
+    serverPort: "https://localhost:8902/api/",
     emailApi: "communication-channel/email/reservations"
   }
 };

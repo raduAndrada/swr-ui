@@ -65,7 +65,6 @@ export class PrivateEventsForm {
       this.openToast();
       this.closeModal();
     }, error => {
-      console.log('Error', error);
     });
   }
 

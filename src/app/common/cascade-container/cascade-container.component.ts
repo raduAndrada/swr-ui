@@ -13,7 +13,6 @@ export class CascadeContainerComponent {
   @Input() rowColor: any;
   @Input() reversed: any; 
   constructor() { 
-    console.log(this.reversed)
   }
 
 
