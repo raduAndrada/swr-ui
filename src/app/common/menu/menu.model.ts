@@ -1,4 +1,3 @@
-import { compileDeclareClassMetadata } from "@angular/compiler";
 
 export interface MenuItem {
     name: string;

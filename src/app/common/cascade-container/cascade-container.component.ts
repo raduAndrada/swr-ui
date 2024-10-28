@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-cascade-container',
   templateUrl: './cascade-container.component.html',
+  styleUrls:  ['./cascade-container.scss']
 })
 export class CascadeContainerComponent {
 

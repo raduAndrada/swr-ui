@@ -1,6 +1,5 @@
-<div [class]="rowColor">
-    <div class=" d-flex">
-      <div *ngIf="reversed === 'true'" class="col-6">
+    <div [class]="'d-flex' + rowColor ">
+      <div *ngIf="reversed === 'true'">
         <img mdbLightboxItem [src]="imgSrc" [alt]="imgAlt" class="w-100" />
       </div>
       <div class="col-6 align-self-center">
@@ -10,9 +9,8 @@
             
           </div>
       </div>
-      <div *ngIf="reversed !== 'true'" class="col-6" >
+      <div *ngIf="reversed !== 'true'"  >
         <img mdbLightboxItem [src]="imgSrc" [alt]="imgAlt" class="w-100" />
       </div>
     </div>
-  </div>
   <br/>

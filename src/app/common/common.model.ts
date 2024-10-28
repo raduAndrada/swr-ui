@@ -88,7 +88,7 @@ export const contact: ContactData = {
     },
     phoneNumber: '0730165163',
     openHours: [`Lun-Vin: 09-22`, `Sam: 10-22`, `Dum: Inchis`],
-    email: 'rezervari@bistrogram.ro'
+    email: 'rezervari@bistrogram.com'
 }
 
 export const eggs_benedict = {

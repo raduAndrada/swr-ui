@@ -1,21 +1,21 @@
 <div class="main-color">
-  <div class="d-flex justify-content-left">
-    <div class="col-lg-9 col-sm-6 mt-4">
+  <div class="d-flex justify-content-left row">
+    <div class="col-lg-8 col-sm-12 m-3 text-left">
       <h1>{{header}}</h1>
       <p class="lead">{{lead}}</p>
     </div>
-    <div class="col-lg-3 col-sm-6 row">
-      <div class="col-8 text-center pt-4">
+    <div class="col-lg-3 col-sm-12 mb-2">
+      <div class="col-12 text-center ">
         <!-- <h6>GRAM</h6> -->
         <hr class="bg-white">
       </div>
 
-      <div class="col-10 offset-1">
+      <div class="col-12 text-end">
         <ul class="list-inline">
           <li *ngFor="let icon of icons" class="list-inline-item"><i [class]="'fas fa-xl ' + icon"></i></li>
         </ul>
       </div>
-      <div class="col-10 offset-1">
+      <div class="col-12 text-end">
         <button class="btn  text-white dark-color" type="button" data-mdb-ripple-init 
           routerLink="{{menuItems[1].link}}">Meniul Nostru</button>
       </div>
