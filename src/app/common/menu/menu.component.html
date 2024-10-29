@@ -1,51 +1,52 @@
 <div class="main-color">
 
-<nav class="navbar navbar-expand-lg ">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-        <!-- Navbar brand -->
-        <a class="navbar-brand me-2">
-            <img src="./assets/logo.PNG" alt="Gram bistro" loading="lazy" style="height: 75px;"/>
-        </a>
+    <nav class="navbar navbar-expand-lg ">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Navbar brand -->
+            <a class="navbar-brand me-2">
+                <img src="./assets/logo.PNG" alt="Gram bistro" loading="lazy" style="height: 75px;" />
+            </a>
 
-        <!-- Toggle button -->
-        <button class="navbar-toggler" type="button" (click)="buttonsNav.toggle()" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" (click)="buttonsNav.toggle()" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
 
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" mdbCollapse #buttonsNav="mdbCollapse">
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" mdbCollapse #buttonsNav="mdbCollapse">
 
-            <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li *ngFor="let item of menuItems" class="nav-item">
-                    <a class="nav-link " routerLinkActive="active" mdbWavesEffect
-                        routerLink="{{item.link}}"> <b>{{item.name}} </b><span class="underline"></span></a>
-                </li>
-            </ul>
-            <!-- Left links -->
-            <p class="small text-muted mt-2 float-end" style="font-size: small;overflow: hidden;"><a
-                    class="text-decoration-none " style="color: #2A674F" href="{{contact.location.googleLink}}">
-                    <i class="fas fa-location-dot"></i>{{contact.location.address}} </a> <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a *ngFor="let socialLink of socialLinks" href="{{socialLink.link}}" class="ml-2" style="color: #2A674F">
-                    <i class="{{socialLink.name}}"></i>
-                </a>
-            </p>
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li *ngFor="let item of menuItems" class="nav-item">
+                        <a class="nav-link " routerLinkActive="active" mdbWavesEffect routerLink="{{item.link}}">
+                            <b>{{item.name}} </b><span class="underline"></span></a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+                <p class="small text-muted mt-2 float-end" style="font-size: small;overflow: hidden;"><a
+                        class="text-decoration-none " style="color: #2A674F" href="{{contact.location.googleLink}}">
+                        <i class="fas fa-location-dot"></i>{{contact.location.address}} </a> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a *ngFor="let socialLink of socialLinks" href="{{socialLink.link}}" class="ml-2"
+                        style="color: #2A674F">
+                        <i class="{{socialLink.name}}"></i>
+                    </a>
+                </p>
 
+            </div>
+            <!-- Collapsible wrapper -->
         </div>
-        <!-- Collapsible wrapper -->
-    </div>
-    <!-- Container wrapper -->
-</nav>
+        <!-- Container wrapper -->
+    </nav>
 </div>
-    <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 
-    <div class="fixed-action-btn" id="fixed1">
-        <a class="btn btn-secondary btn-floating" data-mdb-ripple-color="dark" #btnBackToTop (click)="scrollToTop()"
-            [ngStyle]="{'display': display}" id="btnBackToTop">
-            <i class="fas fa-arrow-up fa-lg"></i>
-        </a>
-    </div>
-    <app-footer></app-footer>
+<div class="fixed-action-btn" id="fixed1">
+    <a class="btn btn-secondary btn-floating" data-mdb-ripple-color="dark" #btnBackToTop (click)="scrollToTop()"
+        [ngStyle]="{'display': display}" id="btnBackToTop">
+        <i class="fas fa-arrow-up fa-lg"></i>
+    </a>
+</div>
+<app-footer></app-footer>
