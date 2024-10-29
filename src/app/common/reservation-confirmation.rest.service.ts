@@ -12,9 +12,9 @@ export class ReservationConfirmationRestService extends RestService<ReservationC
 
   constructor(private readonly _http: HttpClient) {
     super(_http);
-    this.baseUrl = environment.communicationChannel.serverPort + environment.communicationChannel.emailApi;
+    this.baseUrl = environment.communicationChannel.serverPort + 
+    environment.communicationChannel.emailApi + "/reservations";
   }
-
 
 
   sendReservationConfirmationEmail(reservationConfirmation: ReservationConfirmation, lang: string): Observable<ReservationConfirmation> {

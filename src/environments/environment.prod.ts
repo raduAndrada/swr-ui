@@ -6,7 +6,7 @@ export const environment = {
     },
     communicationChannel: {
       serverPort: "https://www.bistrogram.ro/api/",
-      emailApi: "communication-channel/email/reservations"
+      emailApi: "communication-channel/email"
     }
   };
 

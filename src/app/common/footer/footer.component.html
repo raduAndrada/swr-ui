@@ -21,7 +21,7 @@
   
       <!-- Section: Form -->
       <section class="">
-        <form action="">
+        <form (ngSubmit)="sendEmail($event)">
           <!--Grid row-->
           <div class="row d-flex justify-content-center">
             <!--Grid column-->
@@ -36,7 +36,7 @@
             <div class="col-md-5 col-12">
               <!-- Email input -->
               <mdb-form-control class="mb-4">
-                <input mdbInput type="email" id="form5Example24" class="form-control" />
+                <input mdbInput type="email" id="form5Example24" class="form-control" name="email" />
                 <label mdbLabel class="form-label" for="form5Example24">Adresa ta de email</label>
               </mdb-form-control>
             </div>
@@ -45,7 +45,7 @@
             <!--Grid column-->
             <div class="col-auto">
               <!-- Submit button -->
-              <button mdbRipple type="submit" class="btn mb-4">
+              <button mdbRipple type="submit" class="btn mb-4" >
                 Ma abonez
               </button>
             </div>

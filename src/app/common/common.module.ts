@@ -28,6 +28,7 @@ import { CascadeContainerComponent } from './cascade-container/cascade-container
 import { EventPlaceholderComponent } from './event-placeholder/event-placeholder.component';
 import { MdbRatingModule } from 'mdb-angular-ui-kit/rating';
 import { RowTemplateComponent } from './row-template/row-template.component';
+import { EmailRestService } from './email.rest.service';
 
 
 
@@ -70,7 +71,7 @@ import { RowTemplateComponent } from './row-template/row-template.component';
       }
     })
   ],
-  providers: [MdbModalService, ConnectionService],
+  providers: [MdbModalService, ConnectionService, EmailRestService],
   exports: [
     AppRoutingModule,
     BrowserModule,

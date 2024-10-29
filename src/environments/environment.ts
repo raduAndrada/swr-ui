@@ -6,7 +6,7 @@ export const environment = {
   },
   communicationChannel: {
     serverPort: "https://localhost:8902/api/",
-    emailApi: "communication-channel/email/reservations"
+    emailApi: "communication-channel/email"
   }
 };
 
