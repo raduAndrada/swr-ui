@@ -45,10 +45,6 @@ export class PrivateEventsForm {
       'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
       'contactFormTel': ['', Validators.required],
       'contactFormPartyType': ['', Validators.required],
-      // 'contactPrivateEventSource': [''],
-      // 'startTimeControl': ['06:00 PM', Validators.required],
-      // 'endTimeControl': ['11:00 PM', Validators.required],
-      // 'datepickerControl': ['', Validators.required],
     });
   }
 
