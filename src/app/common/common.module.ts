@@ -21,8 +21,6 @@ import { MdbSidenavModule } from 'mdb-angular-ui-kit/sidenav';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
 import {MdbDropdownModule} from 'mdb-angular-ui-kit/dropdown';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ReservationForm } from './reservation-form/reservation-form';
 import { CascadeContainerComponent } from './cascade-container/cascade-container.component';
 import { EventPlaceholderComponent } from './event-placeholder/event-placeholder.component';
@@ -62,20 +60,12 @@ import { EmailRestService } from './email.rest.service';
     MdbCollapseModule,
     MdbPopoverModule,
     MdbDropdownModule,
-    MdbRatingModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: httpLoaderClient,
-        deps: [HttpClient]
-      }
-    })
+    MdbRatingModule
   ],
   providers: [MdbModalService, ConnectionService, EmailRestService],
   exports: [
     AppRoutingModule,
     BrowserModule,
-    AppRoutingModule,
     NavbarModule,
     MenuComponent,
     FooterComponent,
@@ -94,7 +84,6 @@ import { EmailRestService } from './email.rest.service';
     MdbSidenavModule,
     MdbCollapseModule,
     MdbPopoverModule,
-    TranslateModule,
     ReservationForm,
     CascadeContainerComponent,
     EventPlaceholderComponent,

@@ -1,4 +1,4 @@
-import { LOCALE_ID, NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DishesModule } from './dishes/dishes.module';
@@ -26,7 +26,6 @@ import { CateringComponent } from './catering/catering/catering.component';
     AboutModule,
     TranslateModule.forRoot()
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'ro' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
